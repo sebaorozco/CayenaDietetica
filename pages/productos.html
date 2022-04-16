@@ -5,136 +5,240 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cayena Dietética & Nutrición - Santiago del Estero</title>
+        <link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
         <!--Aqui empieza el header-->
-        <header>
+        <header class="encabezado">
             <a href="../index.html">
-                <img src="../images/logoCayena.jpg" width="100">
+                <img class="encabezado__logo" src="../images/logocayena3.jpg" width="100">
             </a> 
-            <nav>
-                <ul id="Categorias">
-                  <li><a href="../index.html">Inicio</a></li>
-                  <li><a href="productos.html">Nuestros Productos</a></li>  
-                      <ul>
-                        <li><a href="../pages/productos.html#alimentos">Alimentos Dietéticos</a></li>
-                        <li><a href="../pages/productos.html#celiacos">Para Celíacos</a></li>
-                        <li><a href="../pages/productos.html#diabeticos">Para Diabéticos</a></li>
-                        <li><a href="../pages/productos.html#salud">Salud y Belleza</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="../pages/quienes-somos.html">Quienes Somos</a></li>
-                  <li><a href="../pages/consultorio.html">Consultorio</a></li>
-                  <li><a href="../pages/contacto.html">Contacto</a></li>
+            <nav class="nav">
+                <ul class="menu">
+                    <li class=><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html">Nuestros Productos</a>  
+                        <ul class="menu__items">
+                            <li><a href="productos.html#alimentos">Alimentos Dietéticos</a></li>
+                            <li><a href="productos.html#celiacos">Para Celíacos</a></li>
+                            <li><a href="productos.html#diabeticos">Para Diabéticos</a></li>
+                            <li><a href="productos.html#salud">Salud y Belleza</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="consultorio.html">Consultorio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <slider><img src="images/slider1.jpg" alt=""></slider>
-        </header>  
+        </header> 
+         <!--Aquí empieza el main-->
         <div class="main">
             <h1>Nuestros Productos:</h1>
-            <h2 align="center">Alimentos Dietéticos</h2>
+            <h2 id="alimentos">Alimentos Dietéticos</h2>
             <section>
-                <article id="alimentos">
-                    <table align="center" border="1" cellpadding="10" width="10px">
-                        <tr>
-                            <td align="center"><img src="../images/Prod/mix_salado.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/arroz_basmati.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/levadura_waw.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/agua_coco.jpg" width="100"></td>
-                        </tr>
-                        <tr>
-                            <td><p>Mix salado  <br> Cayena. <br> $250.00</p></td>
-                            <td><p>Arroz Basmati. <br> India Crown. <br> $720.00</p></td>
-                            <td><p>Levadura Nutricional. <br> Waw! <br> $489.99</p></td>
-                            <td><p>Agua de Coco. <br> Vrink. <br> $270.00</p></td>
-                        </tr>
-                    </table>
-                </article>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/mix_salado.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Mix Salado.</p> 
+                        <p>Cayena.</p> 
+                        <p>$250.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/arroz_basmati.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Arroz Basmati.</p> 
+                        <p>India Crown.</p> 
+                        <p>$720.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/levadura_waw.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Levadura Nutricional.</p> 
+                        <p>Waw!</p> 
+                        <p>$489.99</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/agua_coco.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Agua de Coco.</p> 
+                        <p>Vrink.</p> 
+                        <p>$270.00</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ******Celíacos****** -->  
+            <h2 id="celiacos">Para Celíacos</h2>
+            <section>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/sesamo_integral_molido.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Sésamo integral molido.</p> 
+                        <p>Natural Seed.</p> 
+                        <p>$250.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/falafel_natural_pop.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Premezcla para Falafel.</p> 
+                        <p>Natural Pop.</p> 
+                        <p>$920.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/dulce_leche_coco_vegan.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Dulce de leche vegano a base de coco.</p> 
+                        <p>Doña Magdalena.</p> 
+                        <p>$550.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/pasta_almendras_vrink.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Pasta de Almendras libre de gluten.</p> 
+                        <p>Vrink.</p> 
+                        <p>$370.00</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ******Diabéticos****** --> 
+            <h2 id="diabeticos">Para Diabéticos</h2>
+            <section>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/galletas_dulces_ceral.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Galletitas dulces sin azúcar agregada.</p> 
+                        <p>Ceral.</p> 
+                        <p>$250.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/endulzante_natural.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Endulzante natural.</p> 
+                        <p>Waw!</p> 
+                        <p>$920.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/mermelada_cuarto_creciente.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Mermelada endulzada con stevia.</p> 
+                        <p>Cuarto Creciente.</p> 
+                        <p>$429.99</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/mermelada_la_tranquilina.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Mermelada endulzada con stevia.</p> 
+                        <p>La Tranquilina.</p> 
+                        <p>$370.00</p>
+                    </div>
+                </div>
             </section> 
-            <h2 align="center">Para Celíacos</h2>
+            <!-- *********Salud y Belleza******************* -->
+            <h2 id="salud">Para Salud y Belleza</h2>
             <section>
-                <article id="celiacos">
-                    <table align="center" border="1">
-                        <tr>
-                            <td align="center"><img src="../images/Prod/sesamo_integral_molido.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/falafel_natural_pop.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/dulce_leche_coco_vegan.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/pasta_almendras_vrink.jpg" width="100"></td>
-                        </tr>
-                        <tr>
-                            <td><p>Sésamo integral molido. <br> Natural Seed. <br> $250.00</p></td>
-                            <td><p>Premezcla para Falafel. <br> Natural Pop. <br> $920.00</p></td>
-                            <td><p>Dulce de leche vegano a base de coco. <br> Doña Magdalena <br> $550.00</p></td>
-                            <td><p>Pasta de Almendras libre de gluten. <br> Vrink. <br> $370.00</p></td>
-                        </tr>
-                    </table>
-                </article>
-            </section> 
-            <h2 align="center">Para Diabéticos</h2>
-            <section>
-                <article id="diabeticos">
-                    <table align="center" border="1" cellpadding="1" cellspacing="2">
-                        <tr>
-                            <td align="center"><img src="../images/Prod/galletas_dulces_ceral.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/endulzante_natural.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/mermelada_cuarto_creciente.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/mermelada_la_tranquilina.jpg" width="100"></td>
-                        </tr>
-                        <tr>
-                            <td><p>Galletitas dulces sin azúcar agregada. <br> Ceral. <br> $250.00</p></td>
-                            <td><p>Endulzante natural. <br> Waw! <br> $920.00</p></td>
-                            <td><p>Mermelada endulzada con stevia. <br> Cuarto Creciente <br> $429.99</p></td>
-                            <td><p>Mermelada endulzada con stevia. <br> La Tranquilina. <br> $370.00</p></td>
-                        </tr>
-                    </table>
-                </article>
-            </section> 
-            <h2 align="center">Para Salud y Belleza</h2>
-            <section>
-                <article id="salud">
-                    <table align="center" border="1">
-                        <tr>
-                            <td align="center"><img src="../images/Prod/tintura_madre_echinacea.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/venorelax_piernas.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/acido_hialuronico.jpg" width="100"></td>
-                            <td align="center"><img src="../images/Prod/mct_oil.jpg" width="100"></td>
-                        </tr>
-                        <tr>
-                            <td><p>Tintura madre echinacea. <br> Equinácea. <br> $450.00</p></td>
-                            <td><p>Venorelax Gel para piernas. <br> Botanika Esencia. <br> $850.00</p></td>
-                            <td><p>Ácido Hialurónico Suplemento dietario. <br> Original Green <br> $599.99</p></td>
-                            <td><p>Suplemento dietario bebible MCT Oil. <br> Leguilab. <br> $1170.00</p></td>
-                        </tr>
-                    </table>
-                </article>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/tintura_madre_echinacea.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Tintura madre echinacea.</p> 
+                        <p>Equinácea.</p> 
+                        <p>$450.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/venorelax_piernas.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Venorelax Gel para piernas.</p> 
+                        <p>Botanika Esencia.</p> 
+                        <p>$850.00</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/acido_hialuronico.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Ácido Hialurónico Suplemento dietario.</p> 
+                        <p>Original Green.</p> 
+                        <p>$599.99</p>
+                    </div>
+                </div>
+                <div class="ofertas">
+                    <div class="ofertas__foto">
+                        <img src="../images/Prod/mct_oil.jpg" width="100" width="100">
+                    </div>
+                    <div class="ofertas__descripcion">
+                        <p>Suplemento dietario bebible MCT Oil.</p> 
+                        <p>Leguilab.</p> 
+                        <p>$1170.00</p>
+                    </div>
+                </div>
             </section> 
         </div>
-               
-        <footer id="footer">
-            <h2><a href="../index.html">Inicio</a></h2>
-            <aside id="ubicacion">
-                 <h2>¿Dónde estamos?</h2>
-                 <ul>
-                     <li>Jujuy esq. Leandro Alem</li>
-                     <li>Local 2</li>
-                     <li>Santiago del Estero</li>
-                     <li>Argentina</li>
-                 </ul>
-             </aside>
-             <aside id="contactanos">
-                 <h2>Contáctanos</h2>
-                 <ul>
-                     <li>Tel: 03854214413</li>
-                     <li>Mail: cayenadietetica@hotmail.com</li>
-                 </ul>
-             </aside>
-             <aside id="redes">
-                 <h2>Nuestras Redes</h2>
-                 <ul>
-                     <li>Instagram: cayenadietetica</li>
-                     <li>Facebook: Cayena Dietética y Nutrición</li>
-                 </ul>
-             </aside>
-        </footer> 
+         <!--Aqui empieza el footer-->
+        <footer class="pie">
+            <!-- <div class="pie"> -->
+                <div class="pie__items">
+                    <h2><a href="../index.html">Inicio</a></h2>
+                </div>
+                <div class="pie__items">
+                    <h2>¿Dónde estamos?</h2>
+                        <ul class="pie__descripcion">
+                            <li>Jujuy esq. Leandro Alem</li>
+                            <li>Local 2</li>
+                            <li>Santiago del Estero</li>
+                            <li>Argentina</li>
+                        </ul>
+                </div>
+                <div class="pie__items">
+                    <h2>Contáctanos</h2>
+                        <ul class="pie__descripcion">
+                            <li>Tel: 03854214413</li>
+                            <li>Mail: cayenadietetica@hotmail.com</li>
+                        </ul>
+                </div>
+                <div class="pie__items">
+                    <h2>Nuestras Redes</h2>
+                        <ul class="pie__descripcion">
+                            <li><img src="../images/redes/instagram.png" width="10%"> cayenadietetica</li>
+                            <li><img src="../images/redes/facebook.png" width="10%"> Cayena Dietética y Nutrición</li>
+                        </ul>
+                </div>
+            <!-- </div> -->
+        </footer>
      </body>
-    </html>
+</html>

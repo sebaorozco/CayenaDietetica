@@ -2,85 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cayena Dietética & Nutrición - Consultorio Nutricional</title>
+    <title>Cayena Dietética & Nutrición - Santiago del Estero</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-     <!--Aqui empieza el header-->
-     <header>
+    <!--Aqui empieza el header-->
+    <header class="encabezado">
         <a href="../index.html">
-            <img src="../images/logoCayena.jpg" width="100">
+            <img class="encabezado__logo" src="../images/logocayena3.jpg" width="100">
         </a> 
-        <nav id="barraNavegacion">
-            <ul id="listaPrincipal">
-              <li><a href="../index.html">Inicio</a></li>
-              <li><a href="../pages/productos.html">Nuestros Productos</a></li>  
-                  <ul>
-                    <li><a href="../pages/productos.html#alimentosP">Alimentos Dietéticos</a></li>
-                    <li><a href="../pages/productos.html#celiacos">Para Celíacos</a></li>
-                    <li><a href="../pages/productos.html#diabeticos">Para Diabéticos</a></li>
-                    <li><a href="../pages/productos.html#salud">Salud y Belleza</a></li>
+        <nav class="nav">
+            <ul class="menu">
+              <li class=><a href="../index.html">Inicio</a></li>
+              <li><a href="productos.html">Nuestros Productos</a>  
+                  <ul class="menu__items">
+                    <li><a href="productos.html#alimentos">Alimentos Dietéticos</a></li>
+                    <li><a href="productos.html#celiacos">Para Celíacos</a></li>
+                    <li><a href="productos.html#diabeticos">Para Diabéticos</a></li>
+                    <li><a href="productos.html#salud">Salud y Belleza</a></li>
                   </ul>
               </li>
-              <li><a href="../pages/quienes-somos.html">Quienes Somos</a></li>
-              <li><a href="../pages/consultorio.html">Consultorio</a></li>
-              <li><a href="../pages/contacto.html">Contacto</a></li>
+              <li><a href="quienes-somos.html">Quienes Somos</a></li>
+              <li><a href="consultorio.html">Consultorio</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <slider><img src="../images/slider1.jpg" alt=""></slider>
     </header>  
-    <h1>Consultorio Nutricional</h1>
-    <p><b>Estimado cliente, para consultar turnos disponibles en nuestro consultorio nutricional, por favor deje su mensaje.</b></p>
-    <form action="">
-        <fieldset>
-            <legend>Solicitud de turno</legend>
-            <label for="nombre">Nombre</label><br>
-            <input type="text" name="nombre"><br>
-            <label for="telefono">Teléfono</label><br>
-            <input type="number" name="telefono"><br>
-            <label for="email">Email</label><br>
-            <input type="email" name="email"><br>
-            <label for="">¿En qué horario podemos contactarlo?</label><br>
-            <input type="checkbox" value="m" name="maniana">Mañana<br>
-            <input type="checkbox" value="t" name="tarde">Tarde<br>
-            <br>
-            <label for="">Sexo</label><br>
-            <input type="radio" value="m" name="sexo">Masculino
-            <input type="radio" value="f" name="sexo">Femenino
-            <input type="radio" value="o" name="sexo">Otro<br><br>
-            <label for="fecha">¿Qué día quiere realizar su consulta?</label><br>
-            <input type="date"><br>
-            <br>
-            <textarea name="mensaje" placeholder="Deje aquí su mensaje"></textarea>
-            <br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpiar Formulario">
-        </fieldset>
-    </form>
-    <footer id="footer">
-        <h2><a href="../index.html">Inicio</a></h2>
-        <aside id="ubicacion">
-             <h2>¿Dónde estamos?</h2>
-             <ul>
-                 <li>Jujuy esq. Leandro Alem</li>
-                 <li>Local 2</li>
-                 <li>Santiago del Estero</li>
-                 <li>Argentina</li>
-             </ul>
-         </aside>
-         <aside id="contactanos">
-             <h2>Contáctanos</h2>
-             <ul>
-                 <li>Tel: 03854214413</li>
-                 <li>Mail: cayenadietetica@hotmail.com</li>
-             </ul>
-         </aside>
-         <aside id="redes">
-             <h2>Nuestras Redes</h2>
-             <ul>
-                 <li>Instagram: cayenadietetica</li>
-                 <li>Facebook: Cayena Dietética y Nutrición</li>
-             </ul>
-         </aside>
-    </footer> 
+    
+    <!-- <main class="main"> -->
+        <h1>Consultorio Nutricional</h1>
+        <p style="margin: 10px;"><b>Estimado cliente, para consultar turnos disponibles en nuestro consultorio nutricional, por favor deje su mensaje.</b></p>
+        <form action="">
+            <fieldset class="formulario">
+                <legend>Solicitud de turno</legend><br>
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre"><br>
+                <label for="telefono">Teléfono</label><br>
+                <input type="number" name="telefono"><br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email"><br>
+                <br>
+                <label for="">¿En qué horario podemos contactarlo?</label><br>
+                <input type="checkbox" value="m" name="maniana">Mañana<br>
+                <input type="checkbox" value="t" name="tarde">Tarde<br>
+                <br>
+                <label for="">Sexo</label><br>
+                <input type="radio" value="m" name="sexo">Masculino
+                <input type="radio" value="f" name="sexo">Femenino
+                <input type="radio" value="o" name="sexo">Otro<br><br>
+                <label for="">Edad</label><br>
+                <input type="number" name="edad" id=""><br>
+                <br>
+                <label for="fecha">¿Qué día quiere realizar su consulta?</label><br>
+                <input type="date"><br>
+                <br>
+                <textarea name="mensaje" placeholder="Deje aquí su mensaje"></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar Formulario">
+            </fieldset>
+        </form>
+    <!-- </main> -->
+    <!--Aqui empieza el footer-->
+    <footer class="pie">
+        <!-- <div class="pie"> -->
+            <div class="pie__items">
+                <h2><a href="../index.html">Inicio</a></h2>
+            </div>
+            <div class="pie__items">
+                <h2>¿Dónde estamos?</h2>
+                    <ul class="pie__descripcion">
+                        <li>Jujuy esq. Leandro Alem</li>
+                        <li>Local 2</li>
+                        <li>Santiago del Estero</li>
+                        <li>Argentina</li>
+                    </ul>
+            </div>
+            <div class="pie__items">
+                <h2>Contáctanos</h2>
+                    <ul class="pie__descripcion">
+                        <li>Tel: 03854214413</li>
+                        <li>Mail: cayenadietetica@hotmail.com</li>
+                    </ul>
+            </div>
+            <div class="pie__items">
+                <h2>Nuestras Redes</h2>
+                    <ul class="pie__descripcion">
+                        <li><img src="../images/redes/instagram.png" width="10%"> cayenadietetica</li>
+                        <li><img src="../images/redes/facebook.png" width="10%"> Cayena Dietética y Nutrición</li>
+                    </ul>
+            </div>
+        <!-- </div> -->
+    </footer>
 </body>
 </html>
