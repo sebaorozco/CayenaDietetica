@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding: 0;     /*aqui hago un reseto CSS*/
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Kaushan";
+    src: url("../fonts/KaushanScript-Regular.ttf");
+}
+
+body{
+    background-color: #c2edbf;
+}
+
+.encabezado{
+    background-color: #51a64b;
+    padding:10px;
+}
+
+.encabezado__logo{
+    border-radius: 35%;
+    border-style: groove;
+    border-color: magenta;
+}
+
+.encabezado__usuarios{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 10%;
+}
+
+.nav{
+    margin: 1px auto;
+    text-align: center;
+    width: 900px;
+    background-color: green;
+    
+    }
+
+.nav ul{
+    list-style-type: none;
+}
+
+.menu li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu li a{
+    display: block;
+    padding: 1px 20px;
+    margin:20px;
+    color: white;
+    font-family:"Kaushan";
+    font-weight:lighter;
+    font-size:large;
+    text-decoration:none; 
+}
+
+.menu li a:hover{
+    color: aquamarine;
+}
+
+.menu__items{
+    position: absolute;
+    background: #549a49fd;
+    width: 100%;
+    display:none;
+}
+
+.menu__items li a{
+    display: block;
+    padding: 1px 5px;
+    margin: 10px;
+    color:#fff;
+    font-family: "Kaushan";
+}
+
+.menu li:hover .menu__items{
+    display: block;
+}
+
+.slider{
+    height: 213px;
+    width: 100%;
+    margin:5px;
+    background-image: url(../images/slider1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: purple;
+    font-family: "Kaushan";
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.ofertas{
+    margin: 50px 50px;
+    box-shadow: lightskyblue 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: inline-block;
+    width: 250px;
+}
+
+.ofertas__foto{
+    width: 100%;
+    height: auto;
+    padding-left: 50px;
+}
+
+.ofertas:hover{
+    border: 1px solid lightcoral;
+    transform: rotate(-3deg);
+}
+
+.ofertas__descripcion{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px purple;
+    padding: 10px;
+}
+
+.main-footer{
+    background-color: #51a64b;
+    padding:10px;
+    margin-top: 20px;
+}
+
+.pie h2{
+    margin: 20px auto;
+    text-align: center;   
+    text-decoration: none;
+    color: purple;
+}
+
+.pie__items a{
+    margin: 20px auto;
+    text-align: center;   
+    text-decoration: none;
+    color: purple;
+}
+
+.pie__items{
+        margin: 50px 50px;
+        display: inline-block;
+        width: 250px;
+        text-align: center;
+}
+
+.pie__descripcion{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px purple;
+    text-decoration: none;
+    list-style-type: none;
+}
