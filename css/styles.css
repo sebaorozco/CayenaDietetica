@@ -116,7 +116,7 @@ h1{
 }
 
 .quienes{
-    height: 250px;
+    height: 30vh;
 }
 
 .quienes h2{
@@ -132,6 +132,14 @@ h1{
     text-align: justify;
 }
 
+.quienes__image{
+    height: 90vh;
+    width: 100%;
+    background-image: url(../images/localCayena.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .main h2{
     margin: 15px;
@@ -171,10 +179,13 @@ h1{
     padding: 10px;
 }
 
+.contacto{
+    height: 60vh;
+}
+
 .formulario{
     margin-left: 20px;
-    margin-right: 20px;
-   
+    margin-right: 20px;   
 }
 
 /* **********************************FOOTER******************************* */
