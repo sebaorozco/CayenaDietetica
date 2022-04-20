@@ -1,4 +1,5 @@
-<img src="images/Logo/logoCayena.png" width= "100px">
+<img src="images/Logo/logoCayena.jpg" width= "100px">
+
 # Proyecto Cayena Web
 
 Este proyecto tiene como objetivo desarrollar el sitio web de la empresa "Cayena Almacén Orgánico & Natural".
