@@ -14,21 +14,21 @@
     src: url("../fonts/GrapeNuts-Regular.ttf");
 }
 
-body{
+/* body{
     height: 100vh;
     background-color: #c2edbf;
-}
+} */
 
 .padre{
-    height: 100vh;
+    /* height: 100vh; */
     display: grid;
     grid-template-areas:    
                         "logo encabezado encabezado encabezado"
                         "sec1 sec1 sec1 sec1"
                         "sec2 sec2 sec2 sec2"
                         "footer footer footer footer";
-    grid-template-columns: 200px repeat(3,1fr);
-    grid-template-rows: 200px repeat(3,1fr);
+    /* grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr); */
     background-color: #51a64b;
 }
 
@@ -38,9 +38,9 @@ body{
 .encabezado__logo{
     grid-column: logo;
     background-image: url(../images/Logo/logocayena3.jpg);
-    width: 150px; 
-    height: 150px; 
-    margin: 25px 50px;
+    width: 150px;
+    height: 150px;
+    margin: 25px 25px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,9 +60,9 @@ body{
 }
 
 .encabezado__menu{
-    width: 100%;
+    width: auto; 
     margin: 0;
-}
+} 
 
 .encabezado__menu ul{
     display: flex;
@@ -241,14 +241,14 @@ h1{
     background-color: #51a64b;
 } 
 
-.pie__items{
+.pie__items__1, .pie__items{
     width: 250px;
     height: 150px; 
     padding-top: 10px;
     text-align: center;
 }
 
-.pie__items h2{
+.pie__items__1 h2, .pie__items h2{
     text-decoration: none;
     color: purple;
     font-family: "GrapeNuts";
@@ -256,7 +256,7 @@ h1{
     margin-bottom: 15px;
 }
 
-.pie__items h2 a{
+.pie__items__1 h2 a{
     text-decoration: none;
     color: purple;
 }
@@ -282,7 +282,7 @@ h1{
     width: 45%;
 }
 
-.pie__items > h2 a:hover{
+.pie__items__1 > h2 a:hover{
     color: aquamarine;
     transition: 1s;
 }
@@ -292,14 +292,109 @@ h1{
     transition: 0.5s;
 }
 
-/* @media (max-width:360px){
+/**************** Responsive ********************************/
+@media (max-width: 768px){
     .padre{
         grid-template-areas:    
                         "logo logo"
                         "encabezado encabezado"
                         "sec1 sec1"
                         "sec2 sec2"
-                        "footer footer"
                         "footer footer";
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 200px repeat(2,300px) auto 500px;
     }
-} */
+    .encabezado__logo{
+        justify-self: center;
+    }
+    .encabezado__menu__items{
+        margin: 0%;
+        padding: 10px;
+    }
+    .encabezado__menu ul{
+        flex-wrap: wrap;
+    }
+    h1{
+        color: purple;
+        font-family: "Kaushan";
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .quienes p{
+        margin: 2px;
+    }
+    .quienes__image{
+        height: 300px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .pie, .pie__items{
+        flex-wrap: wrap;
+        align-self: flex-start;
+        justify-content: center;
+    }
+    .pie__items__1{
+        height: 30px;
+    }
+}
+
+@media (max-width: 360px){
+    .padre{
+        grid-template-areas:    
+                        "logo"
+                        "encabezado"
+                        "sec1"
+                        "sec2"
+                        "footer";
+                        grid-template-columns: 1fr;
+        grid-template-rows: 200px 210px 350px auto 500px;
+    }
+    .encabezado__logo{
+        justify-self: center;
+    }
+    .encabezado__menu__items{
+        margin: 0%;
+        padding: 10px;
+    }
+    .encabezado__menu ul{
+        flex-direction: column;
+    }
+    .submenu li{
+        margin: 0%;
+    }
+    h1{
+        color: purple;
+        font-family: "Kaushan";
+        font-size: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+    .quienes{
+        height: 350px;
+    }
+    .quienes p{
+        margin: 5px;
+        text-align: justify;
+        height: fit-content;
+    }
+    .quienes__image{
+        height: 200px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .pie, .pie__items{
+        flex-wrap: wrap;
+        align-self: flex-start;
+        justify-content: center;
+    }
+    .pie__items__1{
+        height: 20px;
+    }
+}
