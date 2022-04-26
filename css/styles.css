@@ -14,49 +14,54 @@
     src: url("../fonts/GrapeNuts-Regular.ttf");
 }
 
-/* body{
-    height: 100vh;
-    background-color: #c2edbf;
-} */
+html{
+    font-size: 62.5%;
+}
 
 .padre{
-    /* height: 100vh; */
     display: grid;
     grid-template-areas:    
-                        "logo encabezado encabezado encabezado"
+                        "encabezado encabezado encabezado encabezado"
                         "sec1 sec1 sec1 sec1"
                         "sec2 sec2 sec2 sec2"
                         "footer footer footer footer";
-    /* grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,1fr); */
-    background-color: #51a64b;
-}
+   background-image: radial-gradient(#f3fa58, #f3fa58, #51a64b, #9fd962, #9fd962);
+} 
 
 
 /* ****************************HEADER/NAV***************************** */
+.encabezado{
+    grid-area: encabezado;
+    width: 100%; 
+    height: 150px;
+    padding: 0px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .encabezado__logo{
-    grid-column: logo;
-    background-image: url(../images/Logo/logocayena3.jpg);
-    width: 150px;
-    height: 150px;
-    margin: 25px 25px;
+    background-image: url(../images/Logo/logocayena1.jpg);
+    width: 10rem;
+    height: 10rem; 
+    margin: 20px 40px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30%;
     border-style: groove;
     border-color: magenta; 
+    position: relative;
+    animation-name: giroLogo;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
 } 
 
-.encabezado{
-    grid-column: encabezado;
-    width: 100%; 
-    height: 200px;
-    padding: 0px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.encabezado__logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .encabezado__menu{
@@ -84,10 +89,10 @@
 .encabezado__menu__items a{
     margin: 20px;
     padding: 15px;
-    color: white;
+    color: #005555;
     font-family: "Kaushan";
-    font-weight: lighter;
-    font-size: large;
+    font-weight: bolder;
+    font-size: 2rem;
     text-decoration: none;
     text-align: center;
 }
@@ -97,7 +102,7 @@
     display: flex;
     flex-direction: column;
     visibility: hidden; 
-    background-color: #51a64b;
+    background: radial-gradient(yellowgreen, #51a64b);
 }  
 
 .submenu li{
@@ -106,18 +111,22 @@
     text-align: center;
 }
 
-.encabezado__menu ul li a:hover{
-    color: #F3DAD8;
+.encabezado__menu__items a{
+    transition: transform 2s;
+}
+
+.encabezado__menu__items a:hover{
+    color: white;
     text-decoration: underline;
     transition: 0.5s;
 }
 
 .encabezado__menu__items:hover ul{
-    transition: 2s;
     visibility: visible; 
+    z-index: 1;
 }
 
-/* *********************************MAIN******************************** */
+/* ********************************* MAIN ******************************** */
 .slider{
     grid-area: sec1;
     height: 200px;
@@ -127,15 +136,16 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 0;
 }
-/* ****************************index-productos************************************ */
+/* **************************** index-productos ************************************ */
 .seccion{
     grid-area: sec2;
-    background-color: #82d986;
+    background: radial-gradient(yellowgreen, #51a64b, #E9EFC0);
 }
 
 h1{
-    color: purple;
+    color: #005555;
     font-family: "Kaushan";
     font-size: 35px;
     margin-left: 10px;
@@ -157,20 +167,21 @@ h1{
 }
 
 .ofertas:hover{
-    border: 1px solid lightcoral;
-    transform: rotate(-3deg);
+    transform: scale(1.5);
+    transition: 1s;
 }
 
 .ofertas__descripcion{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 5px purple;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px #005555;
     padding: 10px;
 } 
 
 .seccion h2{
     margin: 15px;
-    color: rgb(115, 4, 115);
+    color: #005555;
     font-family: "GrapeNuts";
     font-size: 25px;
     text-align: center;
@@ -190,7 +201,7 @@ h1{
 
 .quienes h2{
     margin: 15px;
-    color: rgb(115, 4, 115);
+    color: #005555;
     font-family: "GrapeNuts";
     font-size: 25px;
     text-align: center;
@@ -199,6 +210,7 @@ h1{
 .quienes p{
     margin: 10px 50px;
     text-align: justify;
+    font-size: 1.7rem;
 }
 
 .quienes__image{
@@ -213,20 +225,27 @@ h1{
 /* ****************************consultorio************************************ */
 .consultorio{
     grid-area: sec1; 
-    background-color: #c2edbf;
+    background-color: #51a64b;
+}
+
+.consultorio p{
+    font-size: 1.5rem;
 }
 
 .form{
     grid-area: sec2;
-    background-color: #c2edbf;
-    margin-bottom: 5px;
+    font-size: 1.5rem;
+    background: linear-gradient( #51a64b, #E9EFC0, #B4E197, #51a64b);
     padding: 20px;
 }
 
 /* ****************************contacto************************************ */
 .contacto{
     grid-area: sec1;
-    background-color: #c2edbf;
+    background-color: #51a64b;
+}
+.contacto p{
+    font-size: 1.5rem;
 }
 
 /* **********************************FOOTER******************************* */
@@ -236,9 +255,9 @@ h1{
     justify-content: space-between;
     align-items: center;
     margin-top: 0px;
-    height: 150px;
+    height: 200px;
     width: 100%;
-    background-color: #51a64b;
+    background: linear-gradient(to bottom, #51a64b, #9fd962);
 } 
 
 .pie__items__1, .pie__items{
@@ -250,22 +269,24 @@ h1{
 
 .pie__items__1 h2, .pie__items h2{
     text-decoration: none;
-    color: purple;
+    color: #005555;
     font-family: "GrapeNuts";
     font-size: 25px;
+    font-weight: bolder;
     margin-bottom: 15px;
 }
 
 .pie__items__1 h2 a{
     text-decoration: none;
-    color: purple;
+    color: #005555;
 }
 
 .pie__descripcion li{
     margin-top: 5px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 5px purple;
+    font-size: 15px;
+    text-shadow: 2px 2px 5px black;
     text-decoration: none;
     list-style-type: none;
 }
@@ -290,6 +311,28 @@ h1{
 .pie__redes li a img:hover{
     transform: scale(1.5);
     transition: 0.5s;
+}
+
+/* *****************Animacion****************************** */
+@keyframes giroLogo {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(80deg);
+    }
+    40%{
+        transform: rotate(160deg);
+    }
+    60%{
+        transform: rotate(240deg);
+    }
+    80%{
+        transform: scale(320deg);
+    }
+    100%{
+        transform:rotate(360deg)
+    }
 }
 
 /**************** Responsive ********************************/
