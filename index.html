@@ -1,121 +1,145 @@
 <!DOCTYPE html>
 <html>
-    <head lang="es">  
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cayena Dietética & Nutrición - Santiago del Estero</title>
-        <!-- Librería de Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="../CayenaDietetica/images/Icon/iconCayena.jpg">
-        <!-- Libreria de Animaciones -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <!-- Mi CSS -->
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <!--Aqui empieza el header-->
-        <div class="padre">
-            <header class="encabezado">
-                <div class="encabezado__logo">
-                    <a href="../CayenaDietetica/index.html"></a>
-                </div>
-                <nav class="encabezado__menu">
-                    <ul>
-                        <li class="encabezado__menu__items"><a href="pages/productos.html">Nuestros Productos</a>  
-                            <ul class="submenu">
-                                <li><a href="../CayenaDietetica/pages/productos.html#alimentos">Alimentos Dietéticos</a></li>
-                                <li><a href="../CayenaDietetica/pages/productos.html#celiacos">Para Celíacos</a></li>
-                                <li><a href="../CayenaDietetica/pages/productos.html#diabeticos">Para Diabéticos</a></li>
-                                <li><a href="../CayenaDietetica/pages/productos.html#salud">Salud y Belleza</a></li>
+
+<head lang="es">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cayena Dietética & Nutrición - Santiago del Estero</title>
+    <!-- Librería de Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../CayenaDietetica/images/Icon/iconCayena.jpg">
+    <!-- Libreria de Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!--Aqui empieza el header-->
+    <div class="container-fluid">
+        <header class="row">
+                <nav class="navbar navbar-expand-md bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="../CayenaDietetica/index.html"><img class="img-fluid encabezado__logo rounded-circle img-thumbnail" src="../CayenaDietetica/images/Logo/logoCayena2.png" 
+                            alt="Cayena logo"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav encabezado__menu">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Nuestros Productos
+                                    </a>
+                                    <ul class="dropdown-menu submenu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="../CayenaDietetica/pages/productos.html#alimentos">Alimentos Dietéticos</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="../CayenaDietetica/pages/productos.html#celiacos">Para Celíacos</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="../CayenaDietetica/pages/productos.html#diabeticos">Para Diabéticos</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="../CayenaDietetica/pages/productos.html#salud">Salud y Belleza</a></li>
+                                    </ul>
+                                </li>              
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../CayenaDietetica/pages/quienes-somos.html">Quienes Somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../CayenaDietetica/pages/consultorio.html">Consultorio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../CayenaDietetica/pages/contacto.html">Contacto</a>
+                                </li>
                             </ul>
-                        </li>
-                        <li class="encabezado__menu__items"><a href="pages/quienes-somos.html">Quienes Somos</a></li>
-                        <li class="encabezado__menu__items"><a href="pages/consultorio.html">Consultorio</a></li>
-                        <li class="encabezado__menu__items"><a href="pages/contacto.html">Contacto</a></li>
-                    </ul>
+                        </div>
+                    </div>
                 </nav>
-            </header>
-            <!--Aqui empieza el contenido-->
-            <div class="slider animate__animated animate__fadeInLeft"></div>
-            <section class="seccion">
+        </header>
+
+        <!--Aqui empieza el contenido-->
+        <main class="row">
+            <div class="slider animate__animated animate__fadeInLeft animate__slow"></div>
+        </main>
+        <section class="row">
+            <div class="col-lg-4 titulo">
                 <h1>Ofertas y Productos Destacados</h1>
-                <div class="ofertas">
-                    <div class="ofertas__foto">
-                        <img src="images/Prod/dulce_leche_coco_vegan.jpg" width="100">
-                    </div>
-                    <div class="ofertas__descripcion">
-                        <p>Dulce de leche vegano a base de coco.</p> 
-                        <p>Doña Magdalena.</p> 
-                        <p>$550.00</p>
-                    </div>
-                </div>
-               
-                <div class="ofertas">
-                    <div class="ofertas__foto">
-                        <img src="images/Prod/falafel_natural_pop.jpg" width="100">
-                    </div>
-                    <div class="ofertas__descripcion">
-                        <p>Premezcla para Falafel.</p> 
-                        <p>Natural Pop.</p> 
-                        <p>$920.00</p>
-                    </div>
-                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
+                <img src="../CayenaDietetica/images/Prod/dulce_leche_coco_vegan.jpg" class="card-img-top prod__foto" alt="..."> 
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Dulce de leche vegano</h3></li>
+                    <li class="list-group-item prod__descripcion">Doña Magdalena.</li>  
+                    <li class="list-group-item prod__precio">$550,00</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
+                <img src="../CayenaDietetica/images/Prod/falafel_natural_pop.jpg" class="card-img-top prod__foto" alt="...">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Premezcla para Falafel.</h3></li>
+                    <li class="list-group-item prod__descripcion">Natural Pop.</li>  
+                    <li class="list-group-item prod__precio">$920,00</li>
+                </ul>
+            </div>
+            <div class="card col-lg-3 col-md-6 col-sm-12 prod__card" style="width: 25rem;">
+                <img src="../CayenaDietetica/images/Prod/levadura_waw.jpg" class="card-img-top prod__foto" alt="...">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Levadura Nutricional.</h3></li>
+                    <li class="list-group-item prod__descripcion">Healthy Waw</li>  
+                    <li class="list-group-item prod__precio">$489,99</li>
+                </ul>
+            </div>
+            <div class="card col-lg-3 col-md-6 col-sm-12 prod__card" style="width: 25rem;">
+                <img src="../CayenaDietetica/images/Prod/pasta_almendras_vrink.jpg" class="card-img-top prod__foto" alt="...">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Pasta de Almendras s/gluten.</h3></li>
+                    <li class="list-group-item prod__descripcion">Vrink.</li>  
+                    <li class="list-group-item prod__precio">$370,00</li>
+                </ul>
+            </div>
+        </section>
            
-                <div class="ofertas">
-                    <div class="ofertas__foto">
-                        <img src="images/Prod/levadura_waw.jpg" width="100">
-                    </div>
-                    <div class="ofertas__descripcion">
-                        <p>Levadura Nutricional.</p> 
-                        <p>Healthy Waw!</p> 
-                        <p>$489.99</p>
-                    </div>
-                </div>
-            
-                <div class="ofertas">
-                    <div class="ofertas__foto">
-                        <img src="images/Prod/pasta_almendras_vrink.jpg" width="100">
-                    </div>
-                    <div class="ofertas__descripcion">
-                        <p>Pasta de Almendras libre de gluten.</p> 
-                        <p>Vrink.</p> 
-                        <p>$370.00</p>
-                    </div>
-                </div>
-            </section>
-            <!--Aqui empieza el footer-->
-            <footer class="pie">
-                    <div class="pie__items__1">
-                        <h2><a href="index.html">Inicio</a></h2>
-                    </div>
-                    <div class="pie__items">
-                        <h2>¿Dónde estamos?</h2>
-                            <ul class="pie__descripcion">
-                                <li>Jujuy esq. Leandro Alem</li>
-                                <li>Local 2</li>
-                                <li>Santiago del Estero</li>
-                                <li>Argentina</li>
-                            </ul>
-                    </div>
-                    <div class="pie__items">
-                        <h2>Contáctanos</h2>
-                            <ul class="pie__descripcion">
-                                <li>Tel: 03854214413</li>
-                                <li>Mail: cayenadietetica@hotmail.com</li>
-                            </ul>
-                    </div>
-                    <div class="pie__items">
-                        <h2>Nuestras Redes</h2>
-                            <ul class="pie__redes">
-                                <li><a href="https://api.whatsapp.com/send?phone=+5493855027799" target="_blank"><img src="../CayenaDietetica/images/redes/whatsapp.png"></a></li>
-                                <li><a href="https://www.instagram.com/cayenadietetica/" target="_blank"><img src="../CayenaDietetica/images/redes/instagram.png"></a></li>
-                                <li><a href="https://www.facebook.com/Cayena.Dietetica" target="_blank"><img src="../CayenaDietetica/images/redes/facebook.png"></a></li>
-                            </ul>
-                    </div>
-            </footer>
-        </div>
-        <script src="js/bootstrap.bundle.js"></script>
-    </body>
+        <!--Aqui empieza el footer-->
+        <footer class="row pie">
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items__1">
+                <h2><a href="index.html">Inicio</a></h2>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
+                <h2>¿Dónde estamos?</h2>
+                <ul class="pie__descripcion">
+                    <li>Jujuy esq. Leandro Alem</li>
+                    <li>Local 2</li>
+                    <li>Santiago del Estero</li>
+                    <li>Argentina</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
+                <h2>Contáctanos</h2>
+                <ul class="pie__descripcion">
+                    <li>Tel: 03854214413</li>
+                    <li>Mail: cayenadietetica@hotmail.com</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
+                <h2>Nuestras Redes</h2>
+                <ul class="pie__redes">
+                    <li><a href="https://api.whatsapp.com/send?phone=+5493855027799" target="_blank"><img
+                                src="../CayenaDietetica/images/redes/whatsapp.png"></a></li>
+                    <li><a href="https://www.instagram.com/cayenadietetica/" target="_blank"><img
+                                src="../CayenaDietetica/images/redes/instagram.png"></a></li>
+                    <li><a href="https://www.facebook.com/Cayena.Dietetica" target="_blank"><img
+                                src="../CayenaDietetica/images/redes/facebook.png"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- ******* Script de Bootstrap ******* -->
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
 </html>
