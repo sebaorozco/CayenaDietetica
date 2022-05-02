@@ -39,12 +39,6 @@ body{
     animation-timing-function: linear;
 } 
 
-/* .encabezado__logo a{
-    display: block;
-    width: 100%;
-    height: 100%;
-}  */
-
 .encabezado__menu{
     margin: 2rem;
     padding: 2rem;
@@ -153,12 +147,8 @@ body{
 }
 
 .quienes__image{
-    height: 90vh;
     margin-bottom: 1rem;
-    background-image: url(../images/localCayena.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-align: center;
 }
 /* ****************************consultorio************************************ */
 .consultorio{
@@ -199,10 +189,29 @@ body{
 }
 
 /* **********************************FOOTER******************************* */
+.b-example-divider {
+    height: 2rem;
+    background-color: rgba(2, 52, 23, 0.1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 0.1rem 0;
+    box-shadow: inset 0 .5em 1.5em rgba(2, 52, 23, 0.1), inset 0 .125em .5em rgba(2, 52, 23, .15);
+  } 
+
+.borde{
+    border-top: solid rgba(2, 52, 23, 0.1);
+    border-width: 0.2rem 0;
+  }
+
+.borde p{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1rem;
+}
+
 .pie{
     margin-top: 0px;
     background: linear-gradient(to bottom, #9fd962, #51a64b);
-    box-shadow: 0.5rem 0.2rem 0.8rem rgb(104, 124, 105);
+    box-shadow: 0.8rem 0.2rem 0.8rem rgb(104, 124, 105);
 } 
 
 .pie__items__1, .pie__items{
@@ -240,10 +249,12 @@ body{
     align-items: center;
     list-style-type: none;
     padding: 1rem;
+    
 }
 
 .pie__redes li a img{
-    width: 45%;
+    width: 40%;
+    justify-content: space-between;
    
 }
 
