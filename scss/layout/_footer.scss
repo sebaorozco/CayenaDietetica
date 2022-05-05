@@ -1,0 +1,92 @@
+/* **********************************FOOTER******************************* */
+.b-example-divider {
+	height: 2rem;
+	background-color: rgba(2, 52, 23, 0.1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 0.1rem 0;
+	box-shadow: inset 0 .5em 1.5em rgba(2, 52, 23, 0.1), inset 0 .125em .5em rgba(2, 52, 23, .15);
+}
+.borde {
+	border-top: solid rgba(2, 52, 23, 0.1);
+	border-width: 0.2rem 0;
+	p {
+		margin-left: 2rem;
+		margin-right: 2rem;
+		font-size: 1rem;
+	}
+}
+
+.pie {
+	margin-top: 0px;
+	background: linear-gradient(to bottom, #9fd962, #51a64b);
+	box-shadow: 0.8rem 0.2rem 0.8rem rgb(104, 124, 105);
+}
+.pie__items__1 {
+	padding-top: 1rem;
+	text-align: center;
+	h2 {
+		text-decoration: none;
+		color: $colorfuente;
+		font-family: "GrapeNuts";
+		font-size: 2.5rem;
+		font-weight: bolder;
+		margin-bottom: 1.5rem;
+		a {
+			text-decoration: none;
+			color: $colorfuente;
+		}
+	}
+	>h2 {
+		a {
+			&:hover {
+				color: aquamarine;
+				transition: 1s;
+			}
+		}
+	}
+}
+
+.pie__items {
+	padding-top: 1rem;
+	text-align: center;
+	h2 {
+		text-decoration: none;
+		color: $colorfuente;
+		font-family: "GrapeNuts";
+		font-size: 2.5rem;
+		font-weight: bolder;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.pie__descripcion {
+	li {
+		margin-top: 0.5rem;
+		text-align: center;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 1.5rem;
+		text-shadow: 0.2rem 0.2rem 0.5rem black;
+		text-decoration: none;
+		list-style-type: none;
+	}
+}
+
+.pie__redes {
+	display: flex;
+	margin-top: 1rem;
+	align-items: center;
+	list-style-type: none;
+	padding: 1rem;
+	li {
+		a {
+			img {
+				width: 40%;
+				justify-content: space-between;
+				&:hover {
+					transform: scale(1.5);
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+}

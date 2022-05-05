@@ -1,0 +1,47 @@
+/* ****************************HEADER/NAV***************************** */
+.encabezado{
+    box-shadow: 0rem 0.1rem 0.5rem rgb(104, 124, 105);
+} 
+
+.encabezado__logo{
+    @include tamanio (10rem, 10rem);
+    @include margenes (2rem, 4rem);
+    border-radius: 30%;
+    border-style:groove;
+    border-color: magenta; 
+    animation-name: giroLogo;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+
+.encabezado__menu{
+    @include margenes (2rem, 0);
+    padding: 2rem;
+    font-family: "Kaushan";
+    font-weight: bolder;
+    font-size: 2rem;
+} 
+
+.navbar-light{
+    color: $colorfuente;
+} 
+
+.nav-item{
+    a{
+        @include margenes (0, 1.5rem);
+    }
+}
+
+.nav-link{
+    &:hover{
+        color:white;
+        text-decoration: underline;
+        transition: 0.5s;
+    }
+}
+
+.submenu{
+    background: $radialgrad;
+    width: 100%;
+    font-size: 2rem;
+}  

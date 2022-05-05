@@ -1,0 +1,14 @@
+/* *******aqui hago un reseteo CSS****** */
+*{
+    margin:0;
+    padding:0;                 
+    box-sizing: border-box; 
+}
+/* *******aqui hago un reseteo tamaño de fuente****** */
+html{
+    font-size: 62.5%;          
+}
+/* *******aqui defino el color del body****** */
+body{
+    background-color: $colorbody;
+}

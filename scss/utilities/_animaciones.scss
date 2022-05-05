@@ -1,0 +1,20 @@
+@keyframes giroLogo {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(80deg);
+    }
+    40%{
+        transform: rotate(160deg);
+    }
+    60%{
+        transform: rotate(240deg);
+    }
+    80%{
+        transform: scale(320deg);
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}

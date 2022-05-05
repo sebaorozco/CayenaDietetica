@@ -1,0 +1,8 @@
+@mixin tamanio ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin margenes ($margen1, $margen2){
+    margin: $margen1 $margen2;
+}
