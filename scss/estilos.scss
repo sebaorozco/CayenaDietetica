@@ -1,6 +1,7 @@
 @import "utilities/variables";
 @import "utilities/animaciones";
 @import "utilities/mixins";
+@import "utilities/maps";
 @import "base/reset";
 @import "base/typo";
 @import "layout/header";
@@ -9,7 +10,7 @@
 /* ********************************* MAIN ******************************** */
 .slider{
     @include tamanio (100%, 20rem);
-    margin:0px;
+    margin:0;
     background-image: url(../images/slider1.jpg);
     background-position: center;
     background-repeat: no-repeat;

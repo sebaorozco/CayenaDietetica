@@ -17,13 +17,13 @@
 }
 
 .pie {
-	margin-top: 0px;
-	background: linear-gradient(to bottom, #9fd962, #51a64b);
+	margin-top: map-get($estilosfooter,margensuperior);
+	background: map-get($estilosfooter,color);
 	box-shadow: 0.8rem 0.2rem 0.8rem rgb(104, 124, 105);
 }
 .pie__items__1 {
-	padding-top: 1rem;
-	text-align: center;
+	padding-top: map-get($estilosfooter,paddingsuperior);
+	text-align: map-get($estilosfooter,alineacion);
 	h2 {
 		text-decoration: none;
 		color: $colorfuente;
@@ -47,8 +47,8 @@
 }
 
 .pie__items {
-	padding-top: 1rem;
-	text-align: center;
+	padding-top: map-get($map: $estilosfooter, $key: paddingsuperior );
+	text-align: map-get($map: $estilosfooter, $key: alineacion);
 	h2 {
 		text-decoration: none;
 		color: $colorfuente;
@@ -62,7 +62,7 @@
 .pie__descripcion {
 	li {
 		margin-top: 0.5rem;
-		text-align: center;
+		text-align: map-get($map: $estilosfooter, $key: alineacion);
 		font-family: 'Times New Roman', Times, serif;
 		font-size: 1.5rem;
 		text-shadow: 0.2rem 0.2rem 0.5rem black;

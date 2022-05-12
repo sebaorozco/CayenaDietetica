@@ -6,11 +6,11 @@
 .encabezado__logo{
     @include tamanio (10rem, 10rem);
     @include margenes (2rem, 4rem);
-    border-radius: 30%;
-    border-style:groove;
-    border-color: magenta; 
-    animation-name: giroLogo;
-    animation-duration: 1.5s;
+    border-radius: map-get($map: $estiloslogo, $key: borderadio);
+    border-style: map-get($map: $estiloslogo, $key: bordestilo);
+    border-color: map-get($map: $estiloslogo, $key: bordecolor); 
+    animation-name: map-get($map: $estiloslogo, $key: animacion);
+    animation-duration: map-get($map: $estiloslogo, $key: duracion);
     animation-timing-function: linear;
 }
 

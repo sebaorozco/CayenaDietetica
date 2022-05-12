@@ -1,0 +1,15 @@
+$estilosfooter:(
+    color: linear-gradient(to bottom, #9fd962, #51a64b),
+    margensuperior: 0,
+    paddingsuperior: 1rem,
+    alineacion: center,  
+);
+
+$estiloslogo:(
+    borderadio: 30%,
+    bordestilo: groove,
+    bordecolor: magenta,
+    alineacion: center, 
+    animacion: giroLogo,
+    duracion: 1.5s,
+);

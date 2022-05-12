@@ -91,7 +91,7 @@ body {
     font-size: 1rem; }
 
 .pie {
-  margin-top: 0px;
+  margin-top: 0;
   background: linear-gradient(to bottom, #9fd962, #51a64b);
   box-shadow: 0.8rem 0.2rem 0.8rem #687c69; }
 
@@ -149,7 +149,7 @@ body {
 .slider {
   width: 100%;
   height: 20rem;
-  margin: 0px;
+  margin: 0;
   background-image: url(../images/slider1.jpg);
   background-position: center;
   background-repeat: no-repeat;
