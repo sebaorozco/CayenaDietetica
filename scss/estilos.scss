@@ -9,12 +9,7 @@
 
 /* ********************************* MAIN ******************************** */
 .slider{
-    @include tamanio (100%, 20rem);
-    margin:0;
-    background-image: url(../images/slider1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include tamanio (100%, 30rem);
 }
 
 .sec__color{
@@ -47,7 +42,7 @@
 }
 
 .prod__card {
-	@include margenes (5rem, 6rem);
+	@include margenes (5rem, auto);
 	padding: 0.5rem;
 	background-color: $colorcards;
 	height: 35rem;
@@ -63,6 +58,10 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	filter:grayscale(100%);
+	&:hover {
+		filter: grayscale(0%);
+	}
 }
 
 .prod__descripcion {

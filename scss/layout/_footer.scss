@@ -59,6 +59,17 @@
 	}
 }
 
+.mapa__navegacion {
+	li {
+		text-align: map-get($map: $estilosfooter, $key: alineacion);
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 1.5rem;
+		text-shadow: 0.2rem 0.2rem 0.5rem black;
+		text-decoration: none;
+		list-style-type: none;
+	}
+}
+
 .pie__descripcion {
 	li {
 		margin-top: 0.5rem;
