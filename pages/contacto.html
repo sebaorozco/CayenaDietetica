@@ -75,29 +75,36 @@
         </section>
             
         </main>
-        
-        <div>
-            <form action="">
-                <fieldset class="col-lg-8 offset-lg-2 col-md-9 col-sm-12 form">
-                    <legend><b>Formulario de Contacto</b></legend>
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" name="nombre"><br>
-                    <label for="telefono">Teléfono</label><br>
-                    <input type="number" name="telefono"><br>
-                    <label for="email">Email</label><br>
-                    <input type="email" name="email"><br>
-                    <br>
-                    <label for="cuenta">¿Posee cuenta?</label><br>
-                    <select name="cuenta">
-                        <option value="s">Si</option>
-                        <option value="n" selected>No</option>
-                    </select><br>
-                    <textarea name="mensaje" placeholder="Deje aquí su mensaje"></textarea>
-                    <br>
-                    <button type="submit" class="btn btn-primary boton__form1">Enviar</button>
-                    <button type="reset" class="btn btn-warning boton__form2">Limpiar Formulario</button>
-                </fieldset>
-            </form>
+        <div class="col-lg-8 offset-lg-2 col-md-9 col-sm-12 form">
+            <form>
+                <fieldset><b>Formulario de Contacto</b></fieldset>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="name">
+                </div>
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="number" class="form-control" id="exampleInputPhone" aria-describedby="tel">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mt-3 mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>¿Posee cuenta?</option>
+                        <option value="1">Si</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje/Consulta</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
+                    placeholder="Deje aqui su mensaje"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary boton__form1">Enviar</button>
+                <button type="reset" class="btn btn-warning boton__form2">Limpiar Formulario</button>
+              </form>
         </div>
         <!--Aqui empieza el footer-->
         <footer class="row pie">

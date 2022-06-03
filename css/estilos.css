@@ -36,6 +36,10 @@ body {
   font-family: "GrapeNuts";
   src: url("../fonts/GrapeNuts-Regular.ttf"); }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex-Regular.ttf"); }
+
 /* ****************************HEADER/NAV***************************** */
 .encabezado {
   box-shadow: 0rem 0.1rem 0.5rem #687c69; }
@@ -54,15 +58,13 @@ body {
 .encabezado__menu {
   margin: 2rem 0;
   padding: 2rem;
-  font-family: "Kaushan";
-  font-weight: bolder;
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 2rem; }
 
-.navbar-light {
-  color: #005555; }
-
 .nav-item a {
-  margin: 0 1.5rem; }
+  margin: 0 1.5rem;
+  color: #005555; }
 
 .nav-link:hover {
   color: white;
@@ -163,7 +165,7 @@ body {
 
 .titulo h1 {
   color: #005555;
-  font-family: "Kaushan";
+  font-family: "Roboto";
   margin: 1rem 1rem;
   font-size: 3.5rem; }
 

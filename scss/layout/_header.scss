@@ -17,18 +17,15 @@
 .encabezado__menu{
     @include margenes (2rem, 0);
     padding: 2rem;
-    font-family: "Kaushan";
-    font-weight: bolder;
+    font-family: "Roboto";
+    font-weight: bold;
     font-size: 2rem;
-} 
-
-.navbar-light{
-    color: $colorfuente;
 } 
 
 .nav-item{
     a{
         @include margenes (0, 1.5rem);
+        color: $colorfuente;
     }
 }
 
