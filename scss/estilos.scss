@@ -8,6 +8,10 @@
 @import "layout/footer";
 
 /* ********************************* MAIN ******************************** */
+.cart {
+	@include tamanio (2rem, 2rem);
+	margin-right: 1rem;
+} 
 .slider{
     @include tamanio (100%, 30rem);
 }
@@ -76,6 +80,10 @@
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 1.5rem;
 	text-shadow: 2px 2px 5px #005555;
+}
+
+.boton__carrito {
+	@extend .prod__precio;
 }
 
 /* ****************************quienes somos************************************ */

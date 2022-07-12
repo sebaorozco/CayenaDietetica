@@ -9,10 +9,12 @@
     <!-- SEO -->
     <meta name="description" content="Cayena Dietética, almacén Orgánico y natural en la ciudad de Santiago del Estero. 
     Consultorio Nutricional y venta de cosmética natural y aceites escenciales.">
-    <meta name="keywords" content="productos saludables, para celiacos, para diabéticos, salud, belleza, nutrición, 
+    <meta name="keywords"
+        content="productos saludables, para celiacos, para diabéticos, salud, belleza, nutrición, 
     plan alimentario, Dietética Santiago del Estero, dietética, almacén orgánico, natural, alimentos sauldables, alimentación sana, fitness">
     <!-- Librería de Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/shopstyles.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/Icon/iconCayena.jpg">
     <!-- Libreria de Animaciones -->
@@ -23,139 +25,186 @@
 
 <body>
     <!--Aqui empieza el header-->
-    <div class="container-fluid">
-        <header class="row sticky-lg-top sticky-md-top sticky-sm-top">
-                <nav class="navbar navbar-expand-md bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html"><img class="img-fluid encabezado__logo rounded-circle img-thumbnail" src="images/Logo/logoCayena2.png" 
-                            alt="Cayena logo giratorio"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapsibleNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
-                            <ul class="navbar-nav encabezado__menu">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">Nuestros Productos
-                                    </a>
-                                    <ul class="dropdown-menu submenu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="pages/productos.html#alimentos">Alimentos Dietéticos</a></li>
-                                        <hr class="dropdown-divider">
-                                        <li><a class="dropdown-item" href="pages/productos.html#celiacos">Para Celíacos</a></li>
-                                        <hr class="dropdown-divider">
-                                        <li><a class="dropdown-item" href="pages/productos.html#diabeticos">Para Diabéticos</a></li>
-                                        <hr class="dropdown-divider">
-                                        <li><a class="dropdown-item" href="pages/productos.html#salud">Salud y Belleza</a></li>
-                                    </ul>
-                                </li>              
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/quienes-somos.html">Quienes Somos</a>
+    <header class="row sticky-lg-top sticky-md-top sticky-sm-top">
+        <nav class="navbar navbar-expand-md bg-succes navbar-light encabezado"
+            style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img
+                        class="img-fluid encabezado__logo rounded-circle img-thumbnail"
+                        src="images/Logo/logoCayena2.png" alt="Cayena logo giratorio"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav encabezado__menu">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Nuestros Productos
+                            </a>
+                            <ul class="dropdown-menu submenu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="pages/productos.html#alimentos">Alimentos
+                                        Dietéticos</a></li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="pages/productos.html#celiacos">Para Celíacos</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/consultorio.html">Consultorio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="pages/productos.html#diabeticos">Para
+                                        Diabéticos</a></li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="pages/productos.html#salud">Salud y Belleza</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </nav>
-        </header>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/quienes-somos.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/consultorio.html">Consultorio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex me-5">
+                    <button class="btn btn-outline-dark boton__carrito" type="submit">
+                        <img class="cart" src="images/Icon/shopping-cart.png" alt="Icono agregar al carrito" />
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
 
-        <!--Aqui empieza el contenido-->
-        <section class="row">
-            <img class="slider animate__animated animate__flipInX animate__slow img-fluid" src="images/Slider/slider2.jpg" alt="Imagen Logo Cayena con animación"/>
-        </section>
-        <section class="row">
-            <div class="col-lg-6 col-md-8 col-sm-8 titulo">
-                <h1>Ofertas y Productos Destacados</h1>
+    <!--Aqui empieza el contenido-->
+    <section class="row">
+        <img class="slider animate__animated animate__flipInX animate__slow img-fluid" src="images/Slider/slider2.jpg"
+            alt="Imagen Logo Cayena con animación" />
+    </section>
+    <section class="row">
+        <div class="col-lg-6 col-md-8 col-sm-8 titulo">
+            <h1>Ofertas y Productos Destacados</h1>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 card prod__card h-100" style="width: 25rem;">
+            <img src="images/Prod/dulce_leche_coco_vegan.jpg" class="card-img-top prod__foto img-fluid"
+                alt="Dulce de leche vegano">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item prod__descripcion">
+                    <h3 class="card-title">Dulce de leche vegano</h3>
+                </li>
+                <li class="list-group-item prod__descripcion">Doña Magdalena.</li>
+                <li class="list-group-item prod__precio">$550,00</li>
+            </ul>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
+                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" onclick="agregarAlCarrito('Dulce de leche vegano Doña Magdalena')" href="#">Agregar al carrito</a></div>
             </div>
-        </section>
-        <section class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="images/Prod/dulce_leche_coco_vegan.jpg" class="card-img-top prod__foto" alt="Dulce de leche vegano"> 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Dulce de leche vegano</h3></li>
-                    <li class="list-group-item prod__descripcion">Doña Magdalena.</li>  
-                    <li class="list-group-item prod__precio">$550,00</li>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 card prod__card h-100" style="width: 25rem;">
+            <img src="images/Prod/falafel_natural_pop.jpg" class="card-img-top prod__foto img-fluid"
+                alt="Falafel Natural Pop">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item prod__descripcion">
+                    <h3 class="card-title">Premezcla para Falafel.</h3>
+                </li>
+                <li class="list-group-item prod__descripcion">Natural Pop.</li>
+                <li class="list-group-item prod__precio">$920,00</li>
+            </ul>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
+                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" href="#">Agregar al carrito</a></div>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-6 col-sm-12 prod__card h-100" style="width: 25rem;">
+            <img src="images/Prod/levadura_waw.jpg" class="card-img-top prod__foto img-fluid"
+                alt="Levadura nutricional">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item prod__descripcion">
+                    <h3 class="card-title">Levadura Nutricional.</h3>
+                </li>
+                <li class="list-group-item prod__descripcion">Healthy Waw</li>
+                <li class="list-group-item prod__precio">$489,99</li>
+            </ul>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
+                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" href="#">Agregar al carrito</a></div>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-6 col-sm-12 prod__card h-100" style="width: 25rem;">
+            <img src="images/Prod/pasta_almendras_vrink.jpg" class="card-img-top prod__foto img-fluid"
+                alt="Pasta de almendras sin gluten">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item prod__descripcion">
+                    <h3 class="card-title">Pasta de Almendras s/gluten.</h3>
+                </li>
+                <li class="list-group-item prod__descripcion">Vrink.</li>
+                <li class="list-group-item prod__precio">$370,00</li>
+            </ul>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
+                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" href="#">Agregar al carrito</a></div>
+            </div>
+        </div>
+    </section>
+    <div class=" row b-example-divider"></div>
+    <!--Aqui empieza el footer-->
+    <footer class="row pie">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items__1">
+                <h2>Mapa del sitio</h2>
+                <ul class="nav flex-column mapa__navegacion">
+                    <li class="nav-item mb-2"><a href="pages/productos.html" class="nav-link link-dark p-0">Nuestros
+                            Productos</a></li>
+                    <li class="nav-item mb-2"><a href="pages/quienes-somos.html" class="nav-link link-dark p-0">Quienes
+                            Somos</a></li>
+                    <li class="nav-item mb-2"><a href="pages/consultorio.html"
+                            class="nav-link link-dark p-0">Consultorio</a></li>
+                    <li class="nav-item mb-2"><a href="pages/contacto.html" class="nav-link link-dark p-0">Contacto</a>
+                    </li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="images/Prod/falafel_natural_pop.jpg" class="card-img-top prod__foto" alt="Falafel Natural Pop">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Premezcla para Falafel.</h3></li>
-                    <li class="list-group-item prod__descripcion">Natural Pop.</li>  
-                    <li class="list-group-item prod__precio">$920,00</li>
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
+                <h2>¿Dónde estamos?</h2>
+                <ul class="pie__descripcion">
+                    <li>Jujuy esq. Leandro Alem</li>
+                    <li>Local 2</li>
+                    <li>Santiago del Estero</li>
+                    <li>Argentina</li>
                 </ul>
             </div>
-            <div class="card col-lg-3 col-md-6 col-sm-12 prod__card" style="width: 25rem;">
-                <img src="images/Prod/levadura_waw.jpg" class="card-img-top prod__foto" alt="Levadura nutricional">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Levadura Nutricional.</h3></li>
-                    <li class="list-group-item prod__descripcion">Healthy Waw</li>  
-                    <li class="list-group-item prod__precio">$489,99</li>
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
+                <h2>Contáctanos</h2>
+                <ul class="pie__descripcion">
+                    <li>Tel: 03854214413</li>
+                    <li>Mail: cayenadietetica@hotmail.com</li>
                 </ul>
             </div>
-            <div class="card col-lg-3 col-md-6 col-sm-12 prod__card" style="width: 25rem;">
-                <img src="images/Prod/pasta_almendras_vrink.jpg" class="card-img-top prod__foto" alt="Pasta de almendras sin gluten">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Pasta de Almendras s/gluten.</h3></li>
-                    <li class="list-group-item prod__descripcion">Vrink.</li>  
-                    <li class="list-group-item prod__precio">$370,00</li>
+            <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
+                <h2>Nuestras Redes</h2>
+                <ul class="pie__redes">
+                    <li><a href="https://api.whatsapp.com/send?phone=+5493855027799" target="_blank"><img
+                                src="images/redes/whatsapp.png" alt="Contáctanos por Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/cayenadietetica/" target="_blank"><img
+                                src="images/redes/instagram.png" alt="Ir a nuestro Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/Cayena.Dietetica" target="_blank"><img
+                                src="images/redes/facebook.png" alt="Ir a nuestro Facebook"></a></li>
                 </ul>
             </div>
-        </section>
-        <div class=" row b-example-divider"></div>
-        <!--Aqui empieza el footer-->
-        <footer class="row pie">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12 pie__items__1">
-                    <h2>Mapa del sitio</h2>
-                    <ul class="nav flex-column mapa__navegacion">
-                        <li class="nav-item mb-2"><a href="pages/productos.html" class="nav-link link-dark p-0">Nuestros Productos</a></li>
-                        <li class="nav-item mb-2"><a href="pages/quienes-somos.html" class="nav-link link-dark p-0">Quienes Somos</a></li>
-                        <li class="nav-item mb-2"><a href="pages/consultorio.html" class="nav-link link-dark p-0">Consultorio</a></li>
-                        <li class="nav-item mb-2"><a href="pages/contacto.html" class="nav-link link-dark p-0">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
-                    <h2>¿Dónde estamos?</h2>
-                    <ul class="pie__descripcion">
-                        <li>Jujuy esq. Leandro Alem</li>
-                        <li>Local 2</li>
-                        <li>Santiago del Estero</li>
-                        <li>Argentina</li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
-                    <h2>Contáctanos</h2>
-                    <ul class="pie__descripcion">
-                        <li>Tel: 03854214413</li>
-                        <li>Mail: cayenadietetica@hotmail.com</li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 pie__items">
-                    <h2>Nuestras Redes</h2>
-                    <ul class="pie__redes">
-                        <li><a href="https://api.whatsapp.com/send?phone=+5493855027799" target="_blank"><img
-                                    src="images/redes/whatsapp.png" alt="Contáctanos por Whatsapp"></a></li>
-                        <li><a href="https://www.instagram.com/cayenadietetica/" target="_blank"><img
-                                    src="images/redes/instagram.png" alt="Ir a nuestro Instagram"></a></li>
-                        <li><a href="https://www.facebook.com/Cayena.Dietetica" target="_blank"><img
-                                    src="images/redes/facebook.png" alt="Ir a nuestro Facebook"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between py-4 my-4 borde">
-                <p>&copy; 2022 Cayena Almacén Orgánico & Natural | Santiago del Estero - Argentina, todos los derechos reservados.</p>
-                <p>Desarrolado por <b>SONet</b> </p>
-            </div>
-        </footer>
+        </div>
+        <div class="d-flex justify-content-between py-4 my-4 borde">
+            <p>&copy; 2022 Cayena Almacén Orgánico & Natural | Santiago del Estero - Argentina, todos los derechos
+                reservados.</p>
+            <p>Desarrolado por <b>SONet</b> </p>
+        </div>
+    </footer>
     </div>
     <!-- ******* Script de Bootstrap ******* -->
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
