@@ -81,12 +81,58 @@
 // borrarProducto("Dulce de leche Vegano");
 
 // ***************************Primera Entrega Proyecto Final*****************************
-const productos = [ {id: 1, name: "Dulce de leche vegano", price: 550, stock: 10},
-{id: 2, name: "Premezcla para Falafel", price: 920, stock: 15},
-{id: 3, name: "Levadura nutricional", price: 489.99, stock: 20},
-{id: 4, name: "Pasta de almendras s/gluten", price: 370, stock: 5}]
+// const productos = [ {id: 1, name: "Dulce de leche vegano", price: 550, stock: 10},
+// {id: 2, name: "Premezcla para Falafel", price: 920, stock: 15},
+// {id: 3, name: "Levadura nutricional", price: 489.99, stock: 20},
+// {id: 4, name: "Pasta de almendras s/gluten", price: 370, stock: 5}]
+
+// let carrito = []; 
+   
+// const miCompra = parseInt(prompt("Ingrese el id del producto que desea comprar: \n 1-Dulce de leche vegano. \n 2-Premezcla para Falafel. \n 3-Levadura nutricional. \n 4-Pasta de almendras s/gluten."));
+// const resultado = productos.find((el) => el.id === miCompra);
+
+// function agregarAlCarrito(producto, cantidadDeseada){
+     
+//     let miVenta = {
+//         producto: producto.name, stockActual: producto.stock, cantVendida: cantidadDeseada, costo: producto.price * cantidadDeseada
+//     }
+
+//     carrito.push(miVenta); 
+//     console.log("Usted agregó "+ miVenta.cantVendida +" "+ miVenta.producto + " a su carrito. El costo total es: $" + miVenta.costo);
+//     console.log(carrito);
+// }
+    
+// function validarStock(resultado, cantidadDeseada){
+//     if(resultado.stock > 0){
+//         if(cantidadDeseada<=resultado.stock){
+//             resultado.stock = resultado.stock - cantidadDeseada;
+//             return "Tenemos stock";
+//         }else{
+//             console.log("Lo sentimos, no contamos con el stock suficiente del producto seleccionado. Seleccione menos unidades.");
+//         }
+//     } else{
+//         return "No tenemos stock";
+//     }
+// }
+
+// if (isNaN(miCompra)){
+//     alert("No ingresó un número.");
+// }else if((miCompra > 4) || (miCompra === 0)){
+//     alert("Ingresó un número incorrecto");
+// }else{    
+//     const cantidadDeseada = parseInt(prompt("¿Cuántas unidades de "+ resultado.name + " desea?: "));
+//     validarStock(resultado, cantidadDeseada);
+//     agregarAlCarrito(resultado,cantidadDeseada);
+// }
+// ***************************Desafio Interactuar con HTML *****************************
+const productos = [ 
+    {id: 1, name: "Dulce de leche vegano", price: 550, stock: 10},
+    {id: 2, name: "Premezcla para Falafel", price: 920, stock: 15},
+    {id: 3, name: "Levadura nutricional", price: 489.99, stock: 20},
+    {id: 4, name: "Pasta de almendras s/gluten", price: 370, stock: 5}]
 
 let carrito = []; 
+
    
 const miCompra = parseInt(prompt("Ingrese el id del producto que desea comprar: \n 1-Dulce de leche vegano. \n 2-Premezcla para Falafel. \n 3-Levadura nutricional. \n 4-Pasta de almendras s/gluten."));
 const resultado = productos.find((el) => el.id === miCompra);
@@ -94,13 +140,20 @@ const resultado = productos.find((el) => el.id === miCompra);
 function agregarAlCarrito(producto, cantidadDeseada){
      
     let miVenta = {
-        producto: producto.name, stockActual: producto.stock, cantVendida: cantidadDeseada, costo: producto.price * cantidadDeseada
-    }
+        producto: producto.name, 
+        stockActual: producto.stock, 
+        cantVendida: cantidadDeseada, 
+        costo: producto.price * cantidadDeseada}
+    
 
     carrito.push(miVenta); 
-    console.log("Usted agregó "+ miVenta.cantVendida +" "+ miVenta.producto + " a su carrito. El costo total es: $" + miVenta.costo);
-    console.log(carrito);
+    let compra = document.querySelector("#botonCarrito");
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `<h3> Usted compró: ${miVenta.producto}<h3>
+                            <p> El costo total de su compra es: $ ${miVenta.costo}<p>`
+    compra.appendChild(contenedor);
 }
+
     
 function validarStock(resultado, cantidadDeseada){
     if(resultado.stock > 0){
