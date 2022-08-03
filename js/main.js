@@ -125,55 +125,94 @@
 //     agregarAlCarrito(resultado,cantidadDeseada);
 // }
 // ***************************Desafio Interactuar con HTML *****************************
-const productos = [ 
-    {id: 1, name: "Dulce de leche vegano", price: 550, stock: 10},
-    {id: 2, name: "Premezcla para Falafel", price: 920, stock: 15},
-    {id: 3, name: "Levadura nutricional", price: 489.99, stock: 20},
-    {id: 4, name: "Pasta de almendras s/gluten", price: 370, stock: 5}]
+// const productos = [ 
+//     {id: 1, name: "Dulce de leche vegano", price: 550, stock: 10},
+//     {id: 2, name: "Premezcla para Falafel", price: 920, stock: 15},
+//     {id: 3, name: "Levadura nutricional", price: 489.99, stock: 20},
+//     {id: 4, name: "Pasta de almendras s/gluten", price: 370, stock: 5}]
 
-let carrito = []; 
+// let carrito = []; 
 
    
-const miCompra = parseInt(prompt("Ingrese el id del producto que desea comprar: \n 1-Dulce de leche vegano. \n 2-Premezcla para Falafel. \n 3-Levadura nutricional. \n 4-Pasta de almendras s/gluten."));
-const resultado = productos.find((el) => el.id === miCompra);
+// const miCompra = parseInt(prompt("Ingrese el id del producto que desea comprar: \n 1-Dulce de leche vegano. \n 2-Premezcla para Falafel. \n 3-Levadura nutricional. \n 4-Pasta de almendras s/gluten."));
+// const resultado = productos.find((el) => el.id === miCompra);
 
-function agregarAlCarrito(producto, cantidadDeseada){
+// function agregarAlCarrito(producto, cantidadDeseada){
      
-    let miVenta = {
-        producto: producto.name, 
-        stockActual: producto.stock, 
-        cantVendida: cantidadDeseada, 
-        costo: producto.price * cantidadDeseada}
+//     let miVenta = {
+//         producto: producto.name, 
+//         stockActual: producto.stock, 
+//         cantVendida: cantidadDeseada, 
+//         costo: producto.price * cantidadDeseada}
     
 
-    carrito.push(miVenta); 
-    let compra = document.querySelector("#botonCarrito");
-    let contenedor = document.createElement("div");
-    contenedor.innerHTML = `<h3> Usted compró: ${miVenta.producto}<h3>
-                            <p> El costo total de su compra es: $ ${miVenta.costo}<p>`
-    compra.appendChild(contenedor);
-}
+//     carrito.push(miVenta); 
+//     let compra = document.querySelector("#botonCarrito");
+//     let contenedor = document.createElement("div");
+//     contenedor.innerHTML = `<h3> Usted compró: ${miVenta.producto}<h3>
+//                             <p> El costo total de su compra es: $ ${miVenta.costo}<p>`
+//     compra.appendChild(contenedor);
+// }
 
     
-function validarStock(resultado, cantidadDeseada){
-    if(resultado.stock > 0){
-        if(cantidadDeseada<=resultado.stock){
-            resultado.stock = resultado.stock - cantidadDeseada;
-            return "Tenemos stock";
-        }else{
-            console.log("Lo sentimos, no contamos con el stock suficiente del producto seleccionado. Seleccione menos unidades.");
-        }
-    } else{
-        return "No tenemos stock";
-    }
-}
+// function validarStock(resultado, cantidadDeseada){
+//     if(resultado.stock > 0){
+//         if(cantidadDeseada<=resultado.stock){
+//             resultado.stock = resultado.stock - cantidadDeseada;
+//             return "Tenemos stock";
+//         }else{
+//             console.log("Lo sentimos, no contamos con el stock suficiente del producto seleccionado. Seleccione menos unidades.");
+//         }
+//     } else{
+//         return "No tenemos stock";
+//     }
+// }
 
-if (isNaN(miCompra)){
-    alert("No ingresó un número.");
-}else if((miCompra > 4) || (miCompra === 0)){
-    alert("Ingresó un número incorrecto");
-}else{    
-    const cantidadDeseada = parseInt(prompt("¿Cuántas unidades de "+ resultado.name + " desea?: "));
-    validarStock(resultado, cantidadDeseada);
-    agregarAlCarrito(resultado,cantidadDeseada);
-}
+// if (isNaN(miCompra)){
+//     alert("No ingresó un número.");
+// }else if((miCompra > 4) || (miCompra === 0)){
+//     alert("Ingresó un número incorrecto");
+// }else{    
+//     const cantidadDeseada = parseInt(prompt("¿Cuántas unidades de "+ resultado.name + " desea?: "));
+//     validarStock(resultado, cantidadDeseada);
+//     agregarAlCarrito(resultado,cantidadDeseada);
+// }
+
+/*********************************Desafio Eventos******************************** */
+const productos = [ 
+    {id: 1, name: "Dulce de leche vegano", description: "Doña Magdalena.", price: 550, img: "images/Prod/dulce_leche_coco_vegan.jpg", stock: 10},
+    {id: 2, name: "Premezcla para Falafel", description: "Natural Pop.", price: 920, img:"images/Prod/falafel_natural_pop.jpg", stock: 15},
+    {id: 3, name: "Levadura nutricional", description: "Healthy Waw.", price: 489.99, img:"images/Prod/levadura_waw.jpg", stock: 20},
+    {id: 4, name: "Pasta de almendras s/gluten", description: "Vrink.", price: 370, img:"images/Prod/pasta_almendras_vrink.jpg" , stock: 5}
+]
+
+const carrito = JSON.parse(localStorage.getItem('carrito')) ?? []; 
+document.getElementById("total-carrito").innerHTML = carrito.length;
+
+// Agregar cards de productos //
+productos.forEach((producto) => {
+    const idButton = `add-cart${producto.id}`;
+    document.getElementById("section-cards").innerHTML += `<div class="col-lg-3 col-md-6 col-sm-12 card prod__card h-100" style="width: 25rem">
+    <img src=${producto.img} class="card-img-top prod__foto img-fluid" alt="Dulce de leche vegano">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item prod__descripcion">
+            <h3 class="card-title">${producto.name}</h3>
+        </li>
+        <li class="list-group-item prod__descripcion">${producto.description}</li>
+        <li class="list-group-item prod__precio">$${producto.price}</li>
+    </ul>
+    <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
+        <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" id="${idButton}">Agregar al carrito</a></div>
+    </div>
+    </div>`
+});
+
+// Agregar al carrito //
+productos.forEach((producto) => {
+    const idButton = `add-cart${producto.id}`;
+    document.getElementById(idButton).addEventListener("click", () => {
+        carrito.push(producto);
+        document.getElementById("total-carrito").innerHTML = carrito.length;
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    })  
+})

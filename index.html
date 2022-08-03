@@ -71,7 +71,7 @@
                     <button class="btn btn-outline-dark boton__carrito" type="submit">
                         <img class="cart" src="images/Icon/shopping-cart.png" alt="Icono agregar al carrito" />
                         Carrito
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span id="total-carrito" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
             </div>
@@ -88,67 +88,7 @@
             <h1>Ofertas y Productos Destacados</h1>
         </div>
     </section>
-    <section class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12 card prod__card h-100" style="width: 25rem;">
-            <img src="images/Prod/dulce_leche_coco_vegan.jpg" class="card-img-top prod__foto img-fluid"
-                alt="Dulce de leche vegano">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item prod__descripcion">
-                    <h3 class="card-title">Dulce de leche vegano</h3>
-                </li>
-                <li class="list-group-item prod__descripcion">Doña Magdalena.</li>
-                <li class="list-group-item prod__precio">$550,00</li>
-            </ul>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" onclick="agregarAlCarrito('Dulce de leche vegano Doña Magdalena')" href="#">Agregar al carrito</a></div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 card prod__card h-100" style="width: 25rem;">
-            <img src="images/Prod/falafel_natural_pop.jpg" class="card-img-top prod__foto img-fluid"
-                alt="Falafel Natural Pop">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item prod__descripcion">
-                    <h3 class="card-title">Premezcla para Falafel.</h3>
-                </li>
-                <li class="list-group-item prod__descripcion">Natural Pop.</li>
-                <li class="list-group-item prod__precio">$920,00</li>
-            </ul>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" href="#">Agregar al carrito</a></div>
-            </div>
-        </div>
-        <div class="card col-lg-3 col-md-6 col-sm-12 prod__card h-100" style="width: 25rem;">
-            <img src="images/Prod/levadura_waw.jpg" class="card-img-top prod__foto img-fluid"
-                alt="Levadura nutricional">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item prod__descripcion">
-                    <h3 class="card-title">Levadura Nutricional.</h3>
-                </li>
-                <li class="list-group-item prod__descripcion">Healthy Waw</li>
-                <li class="list-group-item prod__precio">$489,99</li>
-            </ul>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" href="#">Agregar al carrito</a></div>
-            </div>
-        </div>
-        <div class="card col-lg-3 col-md-6 col-sm-12 prod__card h-100" style="width: 25rem;">
-            <img src="images/Prod/pasta_almendras_vrink.jpg" class="card-img-top prod__foto img-fluid"
-                alt="Pasta de almendras sin gluten">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item prod__descripcion">
-                    <h3 class="card-title">Pasta de Almendras s/gluten.</h3>
-                </li>
-                <li class="list-group-item prod__descripcion">Vrink.</li>
-                <li class="list-group-item prod__precio">$370,00</li>
-            </ul>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 mt-4 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto boton__carrito" href="#">Agregar al carrito</a></div>
-            </div>
-        </div>
+    <section class="row" id="section-cards">
     </section>
     <div class=" row b-example-divider"></div>
     <!--Aqui empieza el footer-->
