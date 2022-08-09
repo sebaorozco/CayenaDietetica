@@ -104,7 +104,7 @@ body {
     text-decoration: none;
     color: #005555;
     font-family: "GrapeNuts";
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bolder;
     margin-bottom: 1.5rem; }
     .pie__items__1 h2 a {
@@ -121,7 +121,7 @@ body {
     text-decoration: none;
     color: #005555;
     font-family: "GrapeNuts";
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bolder;
     margin-bottom: 1.5rem; }
 
@@ -155,10 +155,32 @@ body {
       transform: scale(1.5);
       transition: 0.5s; }
 
+/* **********************************MODAL******************************* */
+.table__productos {
+  display: flex; }
+  .table__productos img {
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 0.6rem;
+    margin-right: 2rem; }
+
+.table__cantidad input {
+  width: 4rem;
+  border: none;
+  outline: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-right: 3rem;
+  margin-bottom: 2rem; }
+
+.trash {
+  width: 3rem;
+  height: 3rem; }
+
 /* ********************************* MAIN ******************************** */
 .cart {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   margin-right: 1rem; }
 
 .slider {
@@ -193,8 +215,8 @@ body {
   background-color: #B4ff9f;
   height: 35rem; }
   .prod__card:hover {
-    transform: scale(1.2);
-    transition: 1s; }
+    transform: scale(1.1);
+    transition: 0.8s; }
 
 .prod__foto {
   width: 20rem;
