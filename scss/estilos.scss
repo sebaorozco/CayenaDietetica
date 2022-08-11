@@ -50,7 +50,6 @@
 	@include margenes (5rem, auto);
 	padding: 0.5rem;
 	background-color: $colorcards;
-	height: 35rem;
 	&:hover {
 		transform: scale(1.1);
 		transition: 0.8s;

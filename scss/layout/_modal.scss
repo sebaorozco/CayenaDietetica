@@ -1,6 +1,9 @@
 /* **********************************MODAL******************************* */
-.table__productos{
-    display: flex;
+.table__header {
+    font-size: 2rem;
+}
+
+.table__img {
     img{
         width: 9rem;
         object-fit: contain;
@@ -9,16 +12,39 @@
     }
 }
 
-.table__cantidad input{
-    width: 4rem;
-    border: none;
-    outline: 0;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-right: 3rem;
-    margin-bottom: 2rem;
+.table__cantidad {
+    input{
+        width: 4rem;
+        border: none;
+        outline: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .trash {
 	@include tamanio (3rem, 3rem);
 } 
+
+.table__name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-shadow: 0.2rem 0.2rem 0.5rem #005555;
+}
+
+.table__marca {
+    @extend .table__name;
+    font-size: 1.5rem;
+}
+
+.table__precio {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.table__precioTotal {
+    font-size: 2rem;
+    font-weight: bolder;
+}

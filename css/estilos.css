@@ -156,13 +156,14 @@ body {
       transition: 0.5s; }
 
 /* **********************************MODAL******************************* */
-.table__productos {
-  display: flex; }
-  .table__productos img {
-    width: 9rem;
-    object-fit: contain;
-    border-radius: 0.6rem;
-    margin-right: 2rem; }
+.table__header {
+  font-size: 2rem; }
+
+.table__img img {
+  width: 9rem;
+  object-fit: contain;
+  border-radius: 0.6rem;
+  margin-right: 2rem; }
 
 .table__cantidad input {
   width: 4rem;
@@ -176,6 +177,22 @@ body {
 .trash {
   width: 3rem;
   height: 3rem; }
+
+.table__name, .table__marca {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem 0.5rem #005555; }
+
+.table__marca {
+  font-size: 1.5rem; }
+
+.table__precio {
+  font-size: 1.6rem;
+  font-weight: 600; }
+
+.table__precioTotal {
+  font-size: 2rem;
+  font-weight: bolder; }
 
 /* ********************************* MAIN ******************************** */
 .cart {
@@ -212,8 +229,7 @@ body {
 .prod__card {
   margin: 5rem auto;
   padding: 0.5rem;
-  background-color: #B4ff9f;
-  height: 35rem; }
+  background-color: #B4ff9f; }
   .prod__card:hover {
     transform: scale(1.1);
     transition: 0.8s; }
