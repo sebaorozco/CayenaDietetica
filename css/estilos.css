@@ -169,9 +169,8 @@ body {
   width: 4rem;
   border: none;
   outline: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-right: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 2rem; }
 
 .trash {
@@ -187,8 +186,8 @@ body {
   font-size: 1.5rem; }
 
 .table__precio {
-  font-size: 1.6rem;
-  font-weight: 600; }
+  font-size: 2rem;
+  font-weight: bold; }
 
 .table__precioTotal {
   font-size: 2rem;
