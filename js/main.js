@@ -1,4 +1,4 @@
-//*********************************/ Agregando fetch al proyecto /******************************** *//
+//*********************/ Proyecto Cayena Almacén Dietético - E-commerce /******************************** *//
 
 const contentCarrito = document.getElementById("tbody");
 const botonVaciarCarrito = document.getElementById("vaciarCarrito");
@@ -48,21 +48,24 @@ const generarCardsDestacados = () => {
         .then((informacion) => {
             let acumulador = ``;
             informacion.forEach((producto) =>{
-                acumulador += `<div class="card col-lg-4 col-md-3 col-sm-12 prod__card h-100" style="width: 25rem">
-                    <img src=${producto.img} class="card-img-top prod__foto img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item prod__descripcion">
-                            <h3 class="card-title">${producto.name}</h3>
-                            </li>
-                            <li class="list-group-item prod__descripcion">${producto.marca}</li>
-                            <li class="list-group-item prod__precio">$${producto.price}</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer p-4 pt-0 mt-4 border-top-0 text-center">
-                        <button id="add-cart${producto.id}" class="btn btn-outline-dark mt-auto boton__carrito">
-                        Agregar al carrito
-                        </button>    
+                acumulador += `
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="card prod__card" style="width: 25rem">
+                        <img src=${producto.img} class="card-img-top prod__foto img-fluid" alt="">
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item prod__descripcion">
+                                <h3 class="card-title">${producto.name}</h3>
+                                </li>
+                                <li class="list-group-item prod__descripcion">${producto.marca}</li>
+                                <li class="list-group-item prod__precio">$${producto.price}</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer p-4 pt-0 mt-4 border-top-0 text-center">
+                            <button id="add-cart${producto.id}" class="btn btn-outline-dark mt-auto boton__carrito">
+                            Agregar al carrito
+                            </button>    
+                        </div>
                     </div>
                 </div>`
                 

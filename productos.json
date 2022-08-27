@@ -1,0 +1,19 @@
+[
+    { "id": 1, "name": "Dulce de leche vegano", "marca": "Doña Magdalena.", "price": 550, "img": "../images/Prod/dulce_leche_coco_vegan.jpg", "stock": 10, "cant": 1, "category": "celiacos"},
+    { "id": 2, "name": "Premezcla para Falafel", "marca": "Natural Pop.", "price": 920, "img": "../images/Prod/falafel_natural_pop.jpg", "stock": 15, "cant": 1, "category": "celiacos"},
+    { "id": 3, "name": "Levadura nutricional", "marca": "Healthy Waw.", "price": 489.99, "img": "../images/Prod/levadura_waw.jpg", "stock": 20, "cant":1, "category": "diet"},
+    { "id": 4, "name": "Pasta de almendras s/gluten", "marca": "Vrink.", "price": 370, "img": "../images/Prod/pasta_almendras_vrink.jpg", "stock": 5, "cant":1, "category": "celiacos"},
+    { "id": 5, "name": "Mix Salado.", "marca": "Cayena.", "price": 250, "img": "../images/Prod/mix_salado.jpg", "stock": 35, "cant":1, "category": "diet"},
+    { "id": 6, "name": "Arroz Basmati", "marca": "India Crown.", "price": 720, "img": "../images/Prod/arroz_basmati.jpg", "stock": 15, "cant":1, "category": "diet"},
+    { "id": 7, "name": "Agua de Coco", "marca": "Vrink.", "price": 270, "img": "../images/Prod/agua_coco.jpg", "stock": 5, "cant":1, "category": "diet"},
+    { "id": 8, "name": "Sésamo Integral molido", "marca": "Natural Seed.", "price": 250, "img": "../images/Prod/sesamo_integral_molido.jpg", "stock": 5, "cant":1, "category": "celiacos"},
+    { "id": 9, "name": "Galletitas dulces s/ázucar de Limón", "marca": "Ceral.", "price": 370, "img": "../images/Prod/galletas_dulces_ceral.jpg", "stock": 23, "cant":1, "category": "diabeticos"},
+    { "id": 10, "name": "Endulzante natural", "marca": "Waw!.", "price": 920, "img": "../images/Prod/endulzante_natural.jpg", "stock": 5, "cant":1, "category": "diabeticos"},
+    { "id": 11, "name": "Mermelada endulzada c/stevia", "marca": "Cuarto Creciente.", "price": 429.99, "img": "../images/Prod/mermelada_cuarto_creciente.jpg", "stock": 8, "cant":1, "category": "diabeticos"},
+    { "id": 12, "name": "Mermelada endulzada c/stevia", "marca": "La Tranquilina.", "price": 370, "img": "../images/Prod/mermelada_la_tranquilina.jpg", "stock": 5, "cant":1, "category": "diabeticos"},
+    { "id": 13, "name": "Tintura madre echinacea", "marca": "Equinacea.", "price": 450, "img": "../images/Prod/tintura_madre_echinacea.jpg", "stock": 5, "cant":1, "category": "salud_belleza"},
+    { "id": 14, "name": "Venorelax gel para piernas", "marca": "Botanika esencia.", "price": 850, "img": "../images/Prod/venorelax_piernas.jpg", "stock": 15, "cant":1, "category": "salud_belleza"},
+    { "id": 15, "name": "Ácido Hialurónico", "marca": "Original Green.", "price": 600, "img": "../images/Prod/acido_hialuronico.jpg", "stock": 25, "cant":1, "category": "salud_belleza"},
+    { "id": 16, "name": "Suplemento dietario bebible. MCT Oil", "marca": "Leguilab.", "price": 1170, "img": "../images/Prod/mct_oil.jpg", "stock": 35, "cant":1, "category": "salud_belleza"}
+
+]

@@ -1,6 +1,6 @@
 [
-    { "id": 1, "name": "Dulce de leche vegano", "marca": "Doña Magdalena.", "price": 550, "img": "images/Prod/dulce_leche_coco_vegan.jpg", "stock": 10, "cant": 1},
-    { "id": 2, "name": "Premezcla para Falafel", "marca": "Natural Pop.", "price": 920, "img": "images/Prod/falafel_natural_pop.jpg", "stock": 15, "cant": 1},
-    { "id": 3, "name": "Levadura nutricional", "marca": "Healthy Waw.", "price": 489.99, "img": "images/Prod/levadura_waw.jpg", "stock": 20, "cant":1},
-    { "id": 4, "name": "Pasta de almendras s/gluten", "marca": "Vrink.", "price": 370, "img": "images/Prod/pasta_almendras_vrink.jpg", "stock": 5, "cant":1}
+    { "id": 1, "name": "Dulce de leche vegano", "marca": "Doña Magdalena.", "price": 550, "img": "images/Prod/dulce_leche_coco_vegan.jpg", "stock": 10, "cant": 1, "category": "celiacos"},
+    { "id": 2, "name": "Premezcla para Falafel", "marca": "Natural Pop.", "price": 920, "img": "images/Prod/falafel_natural_pop.jpg", "stock": 15, "cant": 1, "category": "celiacos"},
+    { "id": 3, "name": "Levadura nutricional", "marca": "Healthy Waw.", "price": 489.99, "img": "images/Prod/levadura_waw.jpg", "stock": 20, "cant":1, "category": "diet"},
+    { "id": 4, "name": "Pasta de almendras s/gluten", "marca": "Vrink.", "price": 370, "img": "images/Prod/pasta_almendras_vrink.jpg", "stock": 5, "cant":1, "category": "celiacos"}
 ]

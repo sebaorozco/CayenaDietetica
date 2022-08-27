@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="../images/Icon/iconCayena.jpg">
-    <!-- Libreria de Animaciones -->
+    <!-- Libreria de Animaciones y SweetAlert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js">
     <!-- Mi CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -23,32 +24,31 @@
     <!--Aqui empieza el header-->
     <div class="container-fluid">
         <header class="row">
-            <nav class="navbar navbar-expand-md bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
+            <nav class="navbar navbar-expand-lg bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html"><img class="img-fluid encabezado__logo rounded-circle img-thumbnail" src="../images/Logo/logoCayena2.png" 
                         alt="Cayena logo giratorio"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavbar">
+                        data-bs-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav encabezado__menu">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="../pages/productos.html">
                                     Nuestros Productos
                                 </a>
-                                <ul class="dropdown-menu submenu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="../pages/productos.html#alimentos">Alimentos Dietéticos</a></li>
+                                <ul class="dropdown-menu submenu">
+                                    <li><a class="dropdown-item filtrar-category" data-category="diet">Alimentos Dietéticos</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="../pages/productos.html#celiacos">Para Celíacos</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="celiacos">Para Celíacos</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="../pages/productos.html#diabeticos">Para Diabéticos</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="diabeticos">Para Diabéticos</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="../pages/productos.html#salud">Salud y Belleza</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="salud_belleza">Salud y Belleza</a></li>
                                 </ul>
                             </li>              
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="../pages/quienes-somos.html">Quienes Somos</a>
                             </li>
                             <li class="nav-item">
@@ -59,9 +59,14 @@
                             </li>
                         </ul>
                     </div>
+                    <button class="btn d-flex me-5 position-relative boton__carrito" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modalCarrito" id="botonCarrito">
+                    <img class="cart" src="../images/Icon/shopping-cart1.png" alt="Icono agregar al carrito"/>
+                    <span id="total-carrito" class="position-absolute top-0 start-100 translate-middle badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>
                 </div>
             </nav>
-    </header>
+        </header>
 
         <!--Aquí empieza el main-->
         <section class="row">
@@ -69,167 +74,13 @@
                 <h1>Nuestros Productos:</h1>
             </div>
         </section>
-        <section class="row sec__color">
+        <!-- <section class="row sec__color">
             <div class="col-lg-12 subtitulo">
                 <h2 id="alimentos">Alimentos Dietéticos</h2>
             </div>
-        </section>
-        <section class="row sec__color">
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/mix_salado.jpg" class="card-img-top img-fluid prod__foto" alt="Mix Salado Cayena">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Mix Salado.</h3></li>
-                    <li class="list-group-item prod__descripcion">Cayena.</li>  
-                    <li class="list-group-item prod__precio">$250,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/arroz_basmati.jpg" class="card-img-top img-fluid prod__foto" alt="Arroz Basmati">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Arroz Basmati.</h3></li>
-                    <li class="list-group-item prod__descripcion">India Crown.</li>  
-                    <li class="list-group-item prod__precio">$720,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/levadura_waw.jpg" class="card-img-top img-fluid prod__foto" alt="Levadura Nutricional">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Levadura Nutricional.</h3></li>
-                    <li class="list-group-item prod__descripcion">Healthy Waw!</li>  
-                    <li class="list-group-item prod__precio">$489,99</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/agua_coco.jpg" class="card-img-top img-fluid prod__foto" alt="Agua de coco">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Agua de coco.</h3></li>
-                    <li class="list-group-item prod__descripcion">Vrink</li>  
-                    <li class="list-group-item prod__precio">$270,00</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- ******Celíacos****** -->
-        <section class="row sec__color">
-            <div class="col-lg-12 subtitulo">
-                <h2 id="celiacos">Para Celíacos</h2>
-            </div>
-        </section>
-        <section class="row sec__color">
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/sesamo_integral_molido.jpg" class="card-img-top img-fluid prod__foto" alt="Sésamo integral molido">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Sésamo integral molido.</h3></li>
-                    <li class="list-group-item prod__descripcion">Natural Seed</li>  
-                    <li class="list-group-item prod__precio">$250,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/falafel_natural_pop.jpg" class="card-img-top img-fluid prod__foto" alt="Premezcla para falafel">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Premezcla para falafel.</h3></li>
-                    <li class="list-group-item prod__descripcion">Natural Pop</li>  
-                    <li class="list-group-item prod__precio">$920,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/dulce_leche_coco_vegan.jpg" class="card-img-top img-fluid prod__foto" alt="Dulce de leche vegano Doña Magdalena">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Dulce de leche vegano.</h3></li>
-                    <li class="list-group-item prod__descripcion">Doña Magdalena.</li>  
-                    <li class="list-group-item prod__precio">$550,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/pasta_almendras_vrink.jpg" class="card-img-top img-fluid prod__foto" alt="Pasta de almendras sin gluten">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Pasta de Almendras s/gluten.</h3></li>
-                    <li class="list-group-item prod__descripcion">Vrink</li>  
-                    <li class="list-group-item prod__precio">$370,00</li>
-                </ul> 
-            </div>
-        </section>
-
-        <!-- ******Diabéticos****** -->
-        <section class="row sec__color">
-            <div class="col-lg-12 subtitulo">
-                <h2 id="diabeticos">Para Diabéticos</h2>
-            </div>
-        </section>
-        <section class="row sec__color">
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/galletas_dulces_ceral.jpg" class="card-img-top img-fluid prod__foto" alt="Galletitas dulces sin azúcar">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Galletitas dulces s/ázucar.</h3></li>
-                    <li class="list-group-item prod__descripcion">Ceral</li>  
-                    <li class="list-group-item prod__precio">$250,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/endulzante_natural.jpg" class="card-img-top img-fluid prod__foto" alt="Endulzante natural Waw!">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Endulzante natural.</h3></li>
-                    <li class="list-group-item prod__descripcion">Waw!</li>  
-                    <li class="list-group-item prod__precio">$920,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/mermelada_cuarto_creciente.jpg" class="card-img-top img-fluid prod__foto" alt="Mermelada endulzada con stevia Cuarto Creciente">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Mermelada endulzada c/stevia.</h3></li>
-                    <li class="list-group-item prod__descripcion">Cuarto Creciente</li>  
-                    <li class="list-group-item prod__precio">$429,99</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/mermelada_la_tranquilina.jpg" class="card-img-top img-fluid prod__foto" alt="Mermelada endulzada con stevia La Tranquilina">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Mermelada endulzada c/stevia.</h3></li>
-                    <li class="list-group-item prod__descripcion">La Tranquilina</li>  
-                    <li class="list-group-item prod__precio">$370,00</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- *********Salud y Belleza******************* -->
-        <section class="row sec__color">
-            <div class="col-lg-12 subtitulo">
-                <h2 id="salud">Para Salud y Belleza</h2>
-            </div>
-        </section>
-        <section class="row sec__color">
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/tintura_madre_echinacea.jpg" class="card-img-top img-fluid prod__foto" alt="Tintura madre Equinácea">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Tintura madre echinacea.</h3></li>
-                    <li class="list-group-item prod__descripcion">Equinácea</li>  
-                    <li class="list-group-item prod__precio">$450,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/venorelax_piernas.jpg" class="card-img-top img-fluid prod__foto" alt="Venorelax gel para piernas">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Venorelax gel para piernas.</h3></li>
-                    <li class="list-group-item prod__descripcion">Botanika Esencia</li>  
-                    <li class="list-group-item prod__precio">$850,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/acido_hialuronico.jpg" class="card-img-top img-fluid prod__foto" alt="Ácido hialurónico">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Ácido Hialurónico.</h3></li>
-                    <li class="list-group-item prod__descripcion">Original Green</li>  
-                    <li class="list-group-item prod__precio">$600,00</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 card prod__card" style="width: 25rem;">
-                <img src="../images/Prod/mct_oil.jpg" class="card-img-top img-fluid prod__foto" alt="Suplemento dietario bebible MCT Oil">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item prod__descripcion"><h3 class="card-title">Suplemento dietario bebible MCT Oil.</h3></li>
-                    <li class="list-group-item prod__descripcion">Leguilab</li>  
-                    <li class="list-group-item prod__precio">$1170,00</li>
-                </ul>
-            </div>
+        </section> -->
+        <section class="row" id="cards-productos-filtrados">
+       <!-- aqui van las cards de productos y productos filtrados -->
         </section>
 
         <!--Aqui empieza el footer-->
@@ -278,6 +129,8 @@
     </div>
     <!-- ******* Script de Bootstrap ******* -->
     <script src="../js/bootstrap.bundle.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/products.js"></script>
 </body>
 
 </html>

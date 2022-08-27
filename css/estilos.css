@@ -76,6 +76,14 @@ body {
   width: 100%;
   font-size: 2rem; }
 
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none; }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block; }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0; } }
+
 /* **********************************FOOTER******************************* */
 .b-example-divider {
   height: 2rem;
