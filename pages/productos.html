@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../images/Icon/iconCayena.jpg">
     <!-- Libreria de Animaciones y SweetAlert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"> -->
     <!-- Mi CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -23,7 +23,7 @@
 <body>
     <!--Aqui empieza el header-->
     <div class="container-fluid">
-        <header class="row">
+        <header class="row sticky-lg-top sticky-md-top sticky-sm-top">
             <nav class="navbar navbar-expand-lg bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html"><img class="img-fluid encabezado__logo rounded-circle img-thumbnail" src="../images/Logo/logoCayena2.png" 
@@ -35,17 +35,17 @@
                     <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav encabezado__menu">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="../pages/productos.html">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="../pages/productos.html" onclick="generarCardsProductos()">
                                     Nuestros Productos
                                 </a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item filtrar-category" data-category="diet">Alimentos Dietéticos</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="diet" href="/pages/productos.html#dieteticos">Alimentos Dietéticos</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item filtrar-category" data-category="celiacos">Para Celíacos</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="celiacos" href="/pages/productos.html#celiacos">Para Celíacos</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item filtrar-category" data-category="diabeticos">Para Diabéticos</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="diabeticos" href="/pages/productos.html#diabeticos">Para Diabéticos</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item filtrar-category" data-category="salud_belleza">Salud y Belleza</a></li>
+                                    <li><a class="dropdown-item filtrar-category" data-category="salud_belleza" href="/pages/productos.html#salud">Salud y Belleza</a></li>
                                 </ul>
                             </li>              
                             <li class="nav-item active">
@@ -127,9 +127,58 @@
             </div>
         </footer>
     </div>
+    <!--------------MODAL CARRITO--------------------------------------------------------------------------->
+    <div id="modalCart">
+        <div class="modal fade" id="modalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+            aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Carrito de Compras</h3>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            aria-label="Close">X</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="text-primary table__header">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Productos</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            <!-- Aqui inserto los productos del carrito -->
+                            </tbody>
+                        </table>
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col d-flex justify-content-center table__leyendaVacio" id="leyenda-carrito-vacio">
+                            <p><b> Su carrito está vacío. </b></p> <img class="cart"  src="/images/Icon/empty-cart.png">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col table__precioTotal">Precio total: $<span id="precioTotal">0</span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col d-flex justify-content-left">
+                            <button id="vaciarCarrito" class="btn btn-danger btn-lg">Vaciar Carrito</button>
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Seguir comprando</button>
+                        <button type="button" class="btn btn-primary btn-lg">Finalizar compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- ******* Script de Bootstrap ******* -->
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="../js/main.js"></script> -->
     <script src="../js/products.js"></script>
 </body>
 

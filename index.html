@@ -14,61 +14,49 @@
     plan alimentario, Dietética Santiago del Estero, dietética, almacén orgánico, natural, alimentos sauldables, alimentación sana, fitness">
     <!-- Librería de Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/shopstyles.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/Icon/iconCayena.jpg">
     <!-- Libreria de Animaciones y SweetAlert -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js">
+    
     <!-- Mi CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-    <nav class="navbar navbar-expand-lg bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img class="img-fluid encabezado__logo rounded-circle img-thumbnail" src="/images/Logo/logoCayena2.png" 
-                alt="Cayena logo giratorio"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav encabezado__menu">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/pages/productos.html">
-                            Nuestros Productos
-                        </a>
-                        <ul class="dropdown-menu submenu">
-                            <li><a class="dropdown-item filtrar-category" data-category="diet">Alimentos Dietéticos</a></li>
-                            <hr class="dropdown-divider">
-                            <li><a class="dropdown-item filtrar-category" data-category="celiacos">Para Celíacos</a></li>
-                            <hr class="dropdown-divider">
-                            <li><a class="dropdown-item filtrar-category" data-category="diabeticos">Para Diabéticos</a></li>
-                            <hr class="dropdown-divider">
-                            <li><a class="dropdown-item filtrar-category" data-category="salud_belleza">Salud y Belleza</a></li>
-                        </ul>
-                    </li>              
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/quienes-somos.html">Quienes Somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/consultorio.html">Consultorio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <button class="btn d-flex me-5 position-relative boton__carrito" type="button" data-bs-toggle="modal"
-                data-bs-target="#modalCarrito" id="botonCarrito">
-            <img class="cart" src="/images/Icon/shopping-cart1.png" alt="Icono agregar al carrito"/>
-            <span id="total-carrito" class="position-absolute top-0 start-100 translate-middle badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-        </div>
-    </nav>
+   
 <body>
     <!--Aqui empieza el header-->
     <header class="row sticky-lg-top sticky-md-top sticky-sm-top">
-        
+        <nav id="nav-menu" class="navbar navbar-expand-lg bg-succes navbar-light encabezado" style="background: linear-gradient(to bottom, #51a64b, #9fd962);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html"><img class="img-fluid encabezado__logo rounded-circle img-thumbnail" src="/images/Logo/logoCayena2.png" 
+                    alt="Cayena logo giratorio"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offset-lg-1 collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav encabezado__menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/productos.html">Nuestros Productos</a>
+                        </li>              
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/quienes-somos.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/consultorio.html">Consultorio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn d-flex me-5 position-relative boton__carrito" type="button" data-bs-toggle="modal"
+                    data-bs-target="#modalCarrito" id="botonCarrito">
+                <img class="cart" src="/images/Icon/shopping-cart1.png" alt="Icono agregar al carrito"/>
+                <span id="total-carrito" class="position-absolute top-0 start-100 translate-middle badge bg-dark text-white ms-1 rounded-pill">0</span>
+            </button>
+            </div>
+        </nav>
     </header>
     
     <!--Aqui va la/s imagen/es del slider-->
@@ -77,17 +65,17 @@
             <img class="slider animate__animated animate__flipInX animate__slow img-fluid" src="images/Slider/slider2.jpg"
             alt="Imagen Logo Cayena con animación" />
         </div>
-        <!--Aqui va el contenedor de productos en ofertas-->
+    <!--Aqui va el contenedor de productos en ofertas-->
         <div class="row">
-            <div class="col-lg-6 col-md-8 col-sm-8 titulo">
+            <div class="col-lg-12 col-md-12 col-sm-12 titulo">
                 <h1>Ofertas y Productos Destacados</h1>
             </div>
         </div>
         <main class="row" id="cards-productos-destacados">
-            <!-- aqui van las cards de productos destacados -->
+    <!-- aqui van las cards de productos destacados -->
         </main>
         <div class=" row b-example-divider"></div>
-        <!--Aqui empieza el footer-->
+    <!--Aqui empieza el footer-->
         <footer class="row pie">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12 pie__items__1">
@@ -138,43 +126,50 @@
             </div>
         </footer>
     </div>
-    <!--------------MODAL CARRITO--------------------------------------------------------------------------->
-    <div class="modal fade" id="modalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
-        aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Carrito de Compras</h3>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
-                        aria-label="Close">X</button>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr class="text-primary table__header">
-                                <th scope="col">#</th>
-                                <th scope="col">Productos</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody">
-                        <!-- Aqui inserto los productos del carrito -->
-                        </tbody>
-                    </table>
-                    <br><br>
-                </div>
-                <div class="modal-footer">
-                    <div class="col table__precioTotal">Precio total: $<span id="precioTotal">0</span></div>
-                </div>
-                <div class="modal-footer">
-                    <div class="col d-flex justify-content-left">
-                        <button id="vaciarCarrito" class="btn btn-danger btn-lg">Vaciar Carrito</button>
+<!--------------MODAL CARRITO--------------------------------------------------------------------------->
+    <div id="modalCart">
+        <div class="modal fade" id="modalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+            aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Carrito de Compras</h3>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            aria-label="Close">X</button>
                     </div>
-                    <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Seguir comprando</button>
-                    <button type="button" class="btn btn-primary btn-lg">Finalizar compra</button>
+                    <div class="modal-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="text-primary table__header">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Productos</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            <!-- Aqui inserto los productos del carrito -->
+                            </tbody>
+                        </table>
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col d-flex justify-content-center table__leyendaVacio" id="leyenda-carrito-vacio">
+                            <p><b> Su carrito está vacío. </b></p> <img class="cart"  src="/images/Icon/empty-cart.png">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col table__precioTotal">Precio total: $<span id="precioTotal">0</span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col d-flex justify-content-left">
+                            <button id="vaciarCarrito" class="btn btn-danger btn-lg">Vaciar Carrito</button>
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Seguir comprando</button>
+                        <button type="button" class="btn btn-primary btn-lg">Finalizar compra</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,8 +177,7 @@
     <!-- ******* Script de Bootstrap y propio******* -->
     <script src="js/bootstrap.bundle.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/main.js"></script>
-    <script src="js/products.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

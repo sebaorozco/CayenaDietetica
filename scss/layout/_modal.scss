@@ -15,7 +15,7 @@
 .table__cantidad {
     input{
         width: 4rem;
-        border: none;
+        border:none;
         outline: 0;
         font-size: 2rem;
         font-weight: bold;
@@ -45,5 +45,13 @@
 
 .table__precioTotal {
     font-size: 2rem;
+    font-weight: bolder;
+}
+
+.table__leyendaVacio {
+    @extend .table__precioTotal;
+}
+
+.button__font {
     font-weight: bolder;
 }

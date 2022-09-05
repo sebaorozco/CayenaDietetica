@@ -2,20 +2,20 @@
 
 const contentCarrito = document.getElementById("tbody");
 const botonVaciarCarrito = document.getElementById("vaciarCarrito");
+const leyendaCarritoVacio = document.getElementById("leyenda-carrito-vacio");
+
 
 let carrito = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("carrito")){
         carrito = JSON.parse(localStorage.getItem("carrito"));
-      
         actualizarModalCarrito();
     }
 });
 
 
 //****************/ Vaciar el carrito /****************//
-
 botonVaciarCarrito.addEventListener("click", () => {
     Swal.fire({
         title: '¿Está seguro de vaciar el carrito?',
@@ -43,13 +43,13 @@ botonVaciarCarrito.addEventListener("click", () => {
 
 // *********************/ Generar cards de Productos Destacados/************************//
 const generarCardsDestacados = () => {
-    fetch("productosDestacados.json")
+    fetch("/productosDestacados.json")
         .then((response) => response.json())
         .then((informacion) => {
             let acumulador = ``;
             informacion.forEach((producto) =>{
                 acumulador += `
-                <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card prod__card" style="width: 25rem">
                         <img src=${producto.img} class="card-img-top prod__foto img-fluid" alt="">
                         <div class="card-body">
@@ -73,11 +73,10 @@ const generarCardsDestacados = () => {
             document.getElementById("cards-productos-destacados").innerHTML = acumulador;
         })
 }
-
 generarCardsDestacados();
 
-// *********************/ Llamar a la funcion Agregar al Carrito/************************//
-fetch("productosDestacados.json")
+// *********************/ Llamar a funcion Agregar al Carrito/************************//
+fetch("/productosDestacados.json")
     .then((resp) => resp.json())
     .then(data => {
         productosDestacados = data;
@@ -95,13 +94,11 @@ fetch("productosDestacados.json")
                 agregarAlCarrito(producto.id);
             })
         });
-    
     })
 
-// *****************/ Funcion Agregar al carrito /**********************//
 
+// *****************/ Funcion Agregar al carrito /**********************//
 const agregarAlCarrito = (prodId) => {
-    
     const existeProd = carrito.some ((prod) => prodId === prod.id);
     console.log(existeProd);
         
@@ -122,12 +119,11 @@ const agregarAlCarrito = (prodId) => {
         const item = productosDestacados.find((prod) => prod.id === prodId);
         carrito.push(item);
     }
-    
     actualizarModalCarrito();
 }; 
 
-//************/ Eliminar producto del carrito /****************//
-         
+
+//************/ Eliminar un producto del carrito /****************//
 const eliminarProd = (itemId) => {
     Swal.fire({
         title: '¿Está seguro de eliminar el producto?',
@@ -149,7 +145,7 @@ const eliminarProd = (itemId) => {
             actualizarModalCarrito();
         }
     })
-
+    console.log(carrito);
 };
 
 
@@ -162,7 +158,7 @@ const actualizarModalCarrito = () => {
                                     `
                                     <td scope="row">#</td>
                                     <td class="table__img">
-                                        <img src=${prod.img} alt="">
+                                        <img src=/${prod.img} alt="">
                                     </td>
                                     <td>
                                         <p class="table__name">${prod.name}</p><br>
@@ -170,22 +166,63 @@ const actualizarModalCarrito = () => {
                                     </td>
                                     <td class="table__precio"><p>$${prod.price}</p></td>
                                     <td class="table__cantidad">
-                                        <input type="number" min="1" value= "${prod.cant}" oninput="sumaCantidad(${prod.id})">
+                                        <span class="input-group-btn"> 
+                                            <button class="btn btn-md btn-danger button__font minus" onclick="decrementarCant(${prod.id})" type="button">-</button> 
+                                        </span>
+                                            <input type="text" style="width: 8rem; text-align:center" min="1" value= ${prod.cant} oninput="sumaCantidad(${prod.id})">
+                                        <span class="input-group-btn"> 
+                                            <button class="btn btn-md btn-success button__font plus" onclick="incrementarCant(${prod.id})" type="button">+</button> 
+                                        </span>
                                     </td>
                                     <td>
                                         <button onclick="eliminarProd(${prod.id})" class="btn btn-transparent">
-                                            <img  class="trash" src="images/Icon/delete.png" alt="Icono eliminar item del carrito" />
+                                            <img  class="trash" src="/images/Icon/delete.png" alt="Icono eliminar item del carrito" />
                                         </button>
                                     </td>`
-    localStorage.setItem("carrito", JSON.stringify(carrito));
     })  
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     document.getElementById("total-carrito").innerText = carrito.length;
     document.getElementById("precioTotal").innerText = carrito.reduce((acc,el) => acc + (el.price*el.cant), 0);
-    
-    
+    pintarFooterCarrito();
 };
 
-//************/ Actualizar input cantidad del carrito /****************//
+//************/ Incrementar cantidad con input /****************//
+function incrementarCant(itemId){
+    const item = carrito.find((prod) => prod.id === itemId);
+    const indice = carrito.indexOf(item);
+    let campoCantidad = document.getElementsByTagName("input")[indice];
+    campoCantidad.value = parseInt(campoCantidad.value) + 1;  
+    item.cant++;
+   
+    actualizarModalCarrito();
+}
+
+
+//************/ Decrementar cantidad con input /****************//
+function decrementarCant(itemId){
+    const item = carrito.find((prod) => prod.id === itemId);
+    const indice = carrito.indexOf(item);
+    let campoCantidad = document.getElementsByTagName("input")[indice];
+    console.log(campoCantidad)
+    if(campoCantidad.value < 2){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No ingresaste una cantidad válida!',
+            footer: 'Intenta de nuevo.'
+          })
+        
+    }else{
+        campoCantidad.value = campoCantidad.value - 1;  
+       
+        item.cant--;  
+        actualizarModalCarrito();
+    }
+}
+
+
+
+//************/ Actualizar cantidad del carrito /****************//
 const sumaCantidad = (itemId) => {
     const item = carrito.find((prod) => prod.id === itemId);
     const indice = carrito.indexOf(item);
@@ -201,7 +238,7 @@ const sumaCantidad = (itemId) => {
                                     stock: el.stock,
                                     cant: nuevaCant}:el; 
     })
-    if(isNaN(nuevaCant) || nuevaCant < 0){
+    if(isNaN(nuevaCant) || nuevaCant < 1){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -212,5 +249,14 @@ const sumaCantidad = (itemId) => {
     }else{
         carrito = cantActualizado;
         actualizarModalCarrito();
+    }
+}
+
+
+//*********************** / Mostrar carrito vacío en Modal / **************************************/
+const pintarFooterCarrito = () => {
+    leyendaCarritoVacio.innerHTML = "";
+    if(carrito.length === 0){
+        leyendaCarritoVacio.innerHTML = `<p> <b> Su carrito está vacío. </b></p> <img class="cart"  src="/images/Icon/empty-cart.png">`;
     }
 }

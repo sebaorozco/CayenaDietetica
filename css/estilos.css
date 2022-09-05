@@ -197,14 +197,17 @@ body {
   font-size: 2rem;
   font-weight: bold; }
 
-.table__precioTotal {
+.table__precioTotal, .table__leyendaVacio {
   font-size: 2rem;
+  font-weight: bolder; }
+
+.button__font {
   font-weight: bolder; }
 
 /* ********************************* MAIN ******************************** */
 .cart {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-right: 1rem; }
 
 .slider {
